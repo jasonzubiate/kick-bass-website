@@ -9,13 +9,13 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="section section--small--margin mx-auto">
+      {/* <section className="section section--small--margin mx-auto">
         <div className="padding-container">
           <div className="content-container">
             <PackagesList packages={packages.docs.toReversed()} />
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

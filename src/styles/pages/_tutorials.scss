@@ -1,0 +1,25 @@
+.embla {
+  @apply overflow-hidden relative cursor-grab;
+
+  .embla__container {
+    @apply flex px-4 md:px-0;
+
+    .embla__slide {
+      @apply w-full md:w-[48vw] justify-center;
+      flex: 0 0 auto;
+
+      .slide__video {
+        @apply relative h-auto w-full md:w-[48vw] rounded-lg;
+      }
+    }
+  }
+
+  .embla__buttons {
+    @apply flex gap-4 py-0;
+
+    .embla__prev,
+    .embla__next {
+      @apply rounded-full border-2 border-neutral-50 p-2 md:p-2.5 hover:bg-neutral-50 hover:text-neutral-950 transition-colors duration-300;
+    }
+  }
+}

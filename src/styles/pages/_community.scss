@@ -1,0 +1,7 @@
+.service__card {
+  &:hover {
+    .service__card__image {
+      @apply scale-0;
+    }
+  }
+}

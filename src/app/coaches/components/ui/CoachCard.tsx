@@ -35,11 +35,13 @@ export default function CoachCard({
         />
       ) : null}
 
-      <div className="relative z-10 flex items-center gap-2 lg:gap-3 py-2 pr-5 pl-2 bg-demoSmoke rounded-full">
-        <h5 className="p--sm px-4 py-2 rounded-full bg-codGray text-hardLime whitespace-nowrap">
+      <div className="relative z-10 flex items-center gap-2 lg:gap-3 py-2 pr-5 pl-2 bg-neutral-50 rounded-full">
+        <h5 className="p--sm px-4 py-2 rounded-full bg-neutral-950 text-hardLime whitespace-nowrap">
           {title}
         </h5>
-        <p className="text-codGray whitespace-nowrap p--sm">{coachType()}</p>
+        <p className="text-neutral-950 whitespace-nowrap p--sm">
+          {coachType()}
+        </p>
       </div>
     </Link>
   );

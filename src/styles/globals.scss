@@ -20,6 +20,14 @@
 // Modals
 @import "modals/menu-modal";
 
+// Pages
+@import "pages/coaches";
+@import "pages/community";
+@import "pages/footer";
+@import "pages/preloader";
+@import "pages/pricing";
+@import "pages/tutorials";
+
 .kick-bass-square {
   @apply h-[clamp(14px,2vw,20px)] w-[clamp(8px,0.8vw,10px)];
 }

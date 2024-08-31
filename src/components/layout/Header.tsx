@@ -63,7 +63,7 @@ export default function Header() {
           href="https://www.launchpass.com/k-and-b-tech-house/k-and-b-premium/v3"
           target="_blank"
           rel="noopener noreferrer"
-          className="fluid-text--sm px-4 py-2 rounded-full border-2 border-neutral-50 hover:bg-neutral-50 hover:text-codGray transition-colors duration-300"
+          className="fluid-text--sm px-4 py-2 rounded-full border-2 border-neutral-50 hover:bg-neutral-50 hover:text-neutral-950 transition-colors duration-300"
         >
           Join Kick & Bass
         </a>

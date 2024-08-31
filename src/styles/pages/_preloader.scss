@@ -1,0 +1,30 @@
+.preloader {
+  @apply fixed top-0 left-0 w-full h-screen flex items-center justify-center z-[1000] bg-white overflow-hidden;
+
+  &__content {
+    @apply flex flex-col gap-3;
+  }
+
+  &__image {
+    width: 171px;
+    height: 64px;
+  }
+
+  @media (min-width: 430px) {
+    .preloader__image {
+      width: calc(171px + (342 - 171) * ((100vw - 430px) / (1728 - 430)));
+      height: calc(64px + (128 - 64) * ((100vw - 430px) / (1728 - 430)));
+    }
+  }
+
+  @media (min-width: 1728px) {
+    .preloader__image {
+      width: 342px;
+      height: 128px;
+    }
+  }
+
+  &__status-text {
+    @apply uppercase offbit-101-bold text-neutral-950;
+  }
+}
