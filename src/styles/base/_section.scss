@@ -1,0 +1,54 @@
+:root {
+  --section-small: 8rem;
+  --section-medium: 12rem;
+  --section-big: 24rem;
+
+  @include below(1200px) {
+    --section-small: 5.6rem;
+    --section-medium: 8.4rem;
+    --section-big: 16rem;
+  }
+
+  @include below(750px) {
+    --section-small: 4rem;
+    --section-medium: 6rem;
+    --section-big: 12rem;
+  }
+}
+
+.section--relative {
+  position: relative;
+}
+
+.section--small--padding {
+  padding-top: var(--section-small);
+  padding-bottom: var(--section-small);
+}
+.section--small--margin {
+  margin-top: var(--section-small) !important;
+  margin-bottom: var(--section-small) !important;
+}
+.section--medium--padding {
+  padding-top: var(--section-medium);
+  padding-bottom: var(--section-medium);
+}
+.section--medium--margin {
+  margin-top: var(--section-medium);
+  margin-bottom: var(--section-medium);
+}
+.section--big--padding {
+  padding-top: var(--section-big);
+  padding-bottom: var(--section-big);
+}
+.section--big--margin {
+  margin-top: var(--section-big);
+  margin-bottom: var(--section-big);
+}
+
+.section--light {
+  @apply text-neutral-950 bg-neutral-50;
+}
+
+.section-header-group {
+  @apply flex flex-col gap-6 md:gap-0 md:flex-row md:items-start md:justify-between;
+}

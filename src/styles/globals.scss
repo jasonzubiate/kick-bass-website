@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Abstracts
+@import "abstracts/functions";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Base
+@import "base/animation";
+@import "base/container";
+@import "base/reset";
+@import "base/section";
+@import "base/typography";
+
+// Layout
+@import "layout/header";
+
+// Modals
+@import "modals/menu-modal";
+
+.kick-bass-square {
+  @apply h-[clamp(14px,2vw,20px)] w-[clamp(8px,0.8vw,10px)];
+}

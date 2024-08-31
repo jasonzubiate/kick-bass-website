@@ -1,0 +1,8 @@
+.padding-container {
+  @apply px-4 lg:px-8 2xl:px-12;
+}
+
+.content-container {
+  @apply max-w-[1620px];
+  margin-inline: auto;
+}

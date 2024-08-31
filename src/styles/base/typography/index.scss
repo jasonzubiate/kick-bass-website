@@ -1,0 +1,219 @@
+@import './type-scale';
+
+@font-face {
+  font-family: 'PolySans Slim';
+  src: url('/fonts/PolySans/PolySans-Slim.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PolySans Neutral';
+  src: url('/fonts/PolySans/PolySans-Neutral.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PolySans Median';
+  src: url('/fonts/PolySans/PolySans-Median.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PolySans Neutral Mono';
+  src: url('/fonts/PolySans/PolySans-NeutralMono.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OffBit 101';
+  src: url('/fonts/OffBit/OffBit-101.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OffBit 101 Bold';
+  src: url('/fonts/OffBit/OffBit-101Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.polysans-slim {
+  font-family: 'PolySans Slim', sans-serif;
+}
+
+.polysans-median {
+  font-family: 'PolySans Median', sans-serif;
+}
+
+.polysans-neutral-mono {
+  font-family: 'PolySans Neutral Mono', sans-serif;
+}
+
+.offbit-101 {
+  font-family: 'OffBit 101', sans-serif;
+}
+
+.offbit-101-bold {
+  font-family: 'OffBit 101 Bold', sans-serif;
+}
+
+body {
+  font-family: 'PolySans Neutral', sans-serif;
+}
+
+h1,
+.h1 {
+  @include fluid-type(430px, 1920px, 52px, 144px);
+}
+
+h2,
+.h2 {
+  @include fluid-type(430px, 1920px, 32px, 64px);
+  @apply leading-none;
+}
+
+.h2--lg {
+  @include fluid-type(430px, 1920px, 48px, 96px);
+  @apply leading-none;
+}
+
+.h2--xl {
+  @include fluid-type(430px, 1920px, 52px, 128px);
+  @apply leading-none;
+}
+
+.h3--sm {
+  @include fluid-type(430px, 1920px, 32px, 40px);
+}
+
+h3,
+.h3 {
+  @include fluid-type(430px, 1920px, 32px, 64px);
+  line-height: 83%;
+}
+
+h4,
+.h4 {
+  @include fluid-type(430px, 1920px, 20px, 28px);
+}
+
+h5,
+.h5 {
+  @include fluid-type(430px, 1920px, 20px, 24px);
+}
+
+.p--sm {
+  @include fluid-type(430px, 1920px, 14px, 20px);
+  line-height: 130%;
+}
+
+p,
+.p {
+  @include fluid-type(430px, 1920px, 18px, 26px);
+  line-height: 140%;
+}
+
+.tutorial--name {
+  @include fluid-type(430px, 1920px, 20px, 32px);
+}
+
+.section--header--sm {
+  @include fluid-type(430px, 1920px, 14px, 24px);
+}
+
+.section--header--lg {
+  @include fluid-type(430px, 1920px, 40px, 96px);
+}
+
+.coach--page--p {
+  @include fluid-type(430px, 1920px, 16px, 20px);
+  line-height: 140%;
+}
+
+// fix
+
+.p--lg {
+  @include fluid-type(430px, 1920px, 18px, 24px);
+}
+
+.p--xl {
+  @include fluid-type(430px, 1920px, 20px, 32px);
+}
+
+.p--2xl {
+  @include fluid-type(430px, 1920px, 28px, 64px);
+  line-height: 110%;
+}
+
+.marquee--lg {
+  @include fluid-type(430px, 1920px, 100px, 320px);
+  line-height: 100%;
+}
+
+.bracket--lg {
+  @include fluid-type(430px, 1920px, 72px, 108px);
+  @apply leading-none uppercase;
+}
+
+.screen--text {
+  @include fluid-type(430px, 1920px, 24px, 96px);
+}
+
+// NEW FONTS
+.fluid-text--nav-link {
+  @include fluid-type(430px, 1920px, 14px, 21px);
+}
+
+.fluid-text--h1-lg {
+  @include fluid-type(430px, 1920px, 64px, 250px);
+  letter-spacing: -1%;
+}
+
+.fluid-text--hero-cta {
+  @include fluid-type(430px, 1920px, 20px, 24px);
+}
+
+.fluid-text--footer-header {
+  @include fluid-type(430px, 1920px, 40px, 64px);
+
+}
+
+.fluid-text--testimonial {
+  @include fluid-type(430px, 1920px, 16px, 18px);
+}
+
+.fluid-text--xs {
+  @include fluid-type(430px, 1920px, 12px, 14px);
+}
+
+.fluid-text--sm {
+  @include fluid-type(430px, 1920px, 14px, 20px);
+}
+
+.fluid-text--base {
+  @include fluid-type(430px, 1920px, 16px, 24px);
+}
+
+.fluid-text--lg {
+  @include fluid-type(430px, 1920px, 18px, 28px);
+}
+
+.fluid-text--xl {
+  @include fluid-type(430px, 1920px, 24px, 40px);
+}
+
+.fluid-text--2xl {
+  @include fluid-type(430px, 1920px, 28px, 48px);
+}
+
+.fluid-text--3xl {
+  @include fluid-type(430px, 1920px, 32px, 58px);
+}
+
+.fluid-text--4xl {
+  @include fluid-type(430px, 1920px, 40px, 72px);
+}
