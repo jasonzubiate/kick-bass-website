@@ -7,7 +7,6 @@ export default async function CoachesList() {
   const coaches = (
     await client.getEntries({ content_type: "coach" })
   ).items.map((item) => item.fields);
-  console.log(coaches[0]);
 
   return (
     <>

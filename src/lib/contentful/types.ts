@@ -35,8 +35,9 @@ export type CoachesCopy = {
   paragraph: string;
 };
 
-import { Asset, Entry, EntrySkeletonType } from 'contentful';
-
+export type TutorialsCopy = {
+  paragraph: string;
+};
 
 type Label = {
   link: string;
@@ -59,4 +60,9 @@ export interface CoachFields {
   socials?: Social[];
 }
 
-export type Coach = Entry<CoachFields>;
+export type Tutorial = {
+  id: string;
+  name: string;
+  coach: string;
+  video: any;
+};
