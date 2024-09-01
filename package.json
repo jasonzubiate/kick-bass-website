@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@splinetool/react-spline": "^4.0.0",
     "contentful": "^10.15.0",
     "dotenv": "^16.4.5",
+    "embla-carousel-auto-scroll": "^8.2.0",
     "embla-carousel-react": "^8.2.0",
     "framer-motion": "^11.3.31",
     "gsap": "^3.12.5",

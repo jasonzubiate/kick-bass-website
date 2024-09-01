@@ -42,5 +42,5 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
-  manifest: "/site.webmanifest",
+  metadataBase: new URL("https://kick-bass.com"),
 };
