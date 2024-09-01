@@ -2,13 +2,9 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import CoachCard from "../ui/CoachCard";
-import { Coach } from "@/lib/contentful/types";
+import { ICoachFields } from "@/lib/contentful/contentful";
 
-export default function CoachesListTwoColumns({
-  coaches,
-}: {
-  coaches: Coach[];
-}) {
+export default function CoachesListTwoColumns({ coaches }: { coaches: ICoachFields[] }) {
   const evenColumnsRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const columns: any[][] = [[], []];
@@ -47,7 +43,12 @@ export default function CoachesListTwoColumns({
         >
           {column.map(({ title, category, image, slug }) => (
             <div key={title} className="mt-[2vw] h-[54vw]">
-              <CoachCard title={title} category={category} image={image} slug={slug} />
+              <CoachCard
+                title={title}
+                category={category}
+                image={image}
+                slug={slug || null}
+              />
             </div>
           ))}
         </motion.div>

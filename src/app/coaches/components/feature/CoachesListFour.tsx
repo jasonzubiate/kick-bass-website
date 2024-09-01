@@ -2,12 +2,12 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import CoachCard from "../ui/CoachCard";
-import { Coach } from "@/lib/contentful/types";
+import { ICoachFields } from "@/lib/contentful/contentful";
 
 export default function CoachesListFourColumns({
   coaches,
 }: {
-  coaches: Coach[];
+  coaches: ICoachFields[];
 }) {
   const evenColumnsRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -51,7 +51,7 @@ export default function CoachesListFourColumns({
                 title={title}
                 category={category}
                 image={image}
-                slug={slug}
+                slug={slug || null}
               />
             </div>
           ))}

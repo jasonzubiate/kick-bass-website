@@ -1,10 +1,13 @@
 import { client } from "@/lib/contentful/client";
 import CoachesList from "./components/feature/CoachesList";
-import { CoachesCopy } from "@/lib/contentful/types";
+import { ICoachesCopyFields, ICoachesCopy } from "@/lib/contentful/contentful";
 
 export default async function Coaches() {
-  const copy = (await client.getEntry("5iM7z0gjMJlvFx2Gm2mQQf"))
-    .fields as CoachesCopy;
+  const copyData = (await client.getEntry(
+    "5iM7z0gjMJlvFx2Gm2mQQf"
+  )) as ICoachesCopy;
+
+  const copy = copyData.fields as ICoachesCopyFields;
 
   return (
     <div className="padding-container">

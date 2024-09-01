@@ -5,9 +5,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CustomEase } from "gsap/CustomEase";
 import { useRef } from "react";
 import CoachCard from "../ui/CoachCard";
-import { Coach } from "@/lib/contentful/types";
+import { ICoachFields } from "@/lib/contentful/contentful";
 
-export default function CoachesListOne({ coaches }: { coaches: Coach[] }) {
+export default function CoachesListOne({
+  coaches,
+}: {
+  coaches: ICoachFields[];
+}) {
   const cardRefs = useRef<(HTMLLIElement | null)[]>([]);
 
   useGSAP(() => {
@@ -42,7 +46,12 @@ export default function CoachesListOne({ coaches }: { coaches: Coach[] }) {
           key={title}
           className="w-full h-[600px] opacity-0 scale-95 translate-y-10"
         >
-          <CoachCard title={title} category={category} image={image} slug={slug} />
+          <CoachCard
+            title={title}
+            category={category}
+            image={image}
+            slug={slug || null}
+          />
         </li>
       ))}
     </ul>
