@@ -7,9 +7,8 @@ import {
   TbVolumeOff,
   TbVolume,
 } from "react-icons/tb";
-
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ITutorial, ITutorialFields } from "@/lib/contentful/contentful";
+import { ITutorialFields } from "@/lib/contentful/contentful";
 
 const TWEEN_FACTOR_BASE = 0.3;
 
@@ -177,12 +176,15 @@ export default function TutorialsCarousel({
                 disablePictureInPicture
               />
 
-              <div className="coach-info flex flex-col items-center gap-2 lg:gap-3 mt-6 transition-all duration-200">
+              <div className="coach-info flex flex-col items-center gap-2 mt-6 transition-all duration-200">
                 <h3 className="tutorial--name leading-snug text-center">
                   {title}
                 </h3>
-                <p className="text-grunge50 uppercase polysans-neutral-mono p--sm">
-                  {coach.sys.id}
+                <p className="text-neutral-500 uppercase polysans-neutral-mono p--sm">
+                  {
+                    (coach as unknown as { fields: { title: string } }).fields
+                      .title
+                  }
                 </p>
               </div>
             </div>
