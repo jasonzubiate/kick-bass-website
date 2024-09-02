@@ -42,14 +42,12 @@ export default function Header() {
       <Link
         ref={icon}
         href="/"
-        className="fixed top-10 left-4 lg:left-8 2xl:left-12 z-40 mix-blend-difference w-[clamp(120px,8vw,144px]) h-[clamp(44px,3vw,54px)]"
+        className="fixed top-10 left-4 lg:left-8 2xl:left-12 z-40 mix-blend-difference"
       >
-        <Image
+        <img
           src="/icons/kick-bass-logo-white.png"
           alt="Kick & Bass"
-          objectFit="contain"
-          priority
-          fill
+          className="w-[clamp(120px,8vw,144px]) h-[clamp(44px,3vw,54px)]"
         />
       </Link>
 

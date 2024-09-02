@@ -5,17 +5,17 @@
   @apply w-full;
 }
 th {
-  @apply py-8 border-b border-neutral-600 w-3/12;
+  @apply py-8 border-b border-neutral-500 w-3/12;
 }
 td {
-  @apply py-3 border-b border-neutral-600 w-3/12;
+  @apply py-3 border-b border-neutral-500 w-3/12;
 }
 
 .faq__card {
-  @apply flex flex-col rounded-xl cursor-pointer bg-neutral-800 p-5 2xl:p-6 overflow-hidden;
+  @apply flex flex-col rounded-xl cursor-pointer bg-neutral-900 p-5 2xl:p-6 overflow-hidden;
 
   button {
-    @apply flex items-center justify-center rounded-full bg-neutral-700 p-2 2xl:p-4 transition-transform;
+    @apply flex items-center justify-center rounded-full bg-neutral-800 p-2 2xl:p-4 transition-transform;
 
     .faq__button__icon {
       @apply text-hardLime h-5 w-5 2xl:h-8 2xl:w-8;

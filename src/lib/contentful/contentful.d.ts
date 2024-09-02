@@ -80,6 +80,9 @@ export interface ICommunityCopyFields {
   /** Services Header */
   servicesHeader: string;
 
+  /** Service One Header */
+  serviceOneHeader: string;
+
   /** Service One Description */
   serviceOneDescription: string;
 
@@ -172,8 +175,8 @@ export interface IFeatureFields {
   /** Title */
   title: string;
 
-  /** Package */
-  package: IPackage[];
+  /** Order */
+  order: number;
 }
 
 export interface IFeature extends Entry<IFeatureFields> {
@@ -281,6 +284,9 @@ export interface IPackageFields {
 
   /** Extras */
   extras: string;
+
+  /** Features */
+  features: IFeature[];
 }
 
 export interface IPackage extends Entry<IPackageFields> {
@@ -324,6 +330,34 @@ export interface IShopifyCollection extends Entry<IShopifyCollectionFields> {
     contentType: {
       sys: {
         id: "shopifyCollection";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface ITeamMemberFields {
+  /** Title */
+  title: string;
+
+  /** Role */
+  role: string;
+
+  /** Image */
+  image: Asset;
+}
+
+export interface ITeamMember extends Entry<ITeamMemberFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "teamMember";
         linkType: "ContentType";
         type: "Link";
       };
@@ -424,6 +458,7 @@ export type CONTENT_TYPE =
   | "homeCopy"
   | "package"
   | "shopifyCollection"
+  | "teamMember"
   | "testimonial"
   | "tutorial"
   | "tutorialsCopy";
@@ -437,6 +472,7 @@ export type IEntry =
   | IHomeCopy
   | IPackage
   | IShopifyCollection
+  | ITeamMember
   | ITestimonial
   | ITutorial
   | ITutorialsCopy;

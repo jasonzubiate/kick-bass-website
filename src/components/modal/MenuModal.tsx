@@ -84,7 +84,7 @@ export default function MenuModal({
                   <p
                     className={`${
                       pathname === href
-                        ? "text-neutral-600"
+                        ? "text-neutral-400"
                         : "text-neutral-950"
                     }`}
                   >

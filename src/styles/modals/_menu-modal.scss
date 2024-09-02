@@ -2,7 +2,7 @@
   @apply fixed top-10 right-4 flex flex-col w-[260px] bg-white xl:hidden;
 
   &__header {
-    @apply uppercase text-neutral-600 mb-4 text-sm transition-all delay-200 duration-300;
+    @apply uppercase text-neutral-400 mb-4 text-sm transition-all delay-200 duration-300;
   }
 
   nav {
@@ -16,7 +16,7 @@
       }
 
       .indicator {
-        @apply h-1.5 w-1.5 bg-neutral-600 rounded-full transition-all duration-500;
+        @apply h-1.5 w-1.5 bg-neutral-400 rounded-full transition-all duration-500;
       }
     }
   }

@@ -35,7 +35,9 @@ export default function CoachCard({ name, image, type, slug }: CoachCardProps) {
         <h5 className="p--sm px-4 py-2 rounded-full bg-neutral-950 text-hardLime whitespace-nowrap">
           {name}
         </h5>
-        <p className="text-codGray whitespace-nowrap p--sm">{coachType()}</p>
+        <p className="text-neutral-500 whitespace-nowrap p--sm">
+          {coachType()}
+        </p>
       </div>
     </Link>
   );

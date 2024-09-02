@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
-import "../styles/globals.scss";
-import Header from "@/components/layout/Header";
 import LenisContext from "@/contexts/LenisContext";
 import { metadata } from "../../metadata";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import "../styles/globals.scss";
 
 export { metadata };
 
@@ -17,6 +17,7 @@ export default function RootLayout({
         <LenisContext>
           <Header />
           {children}
+          <Footer />
         </LenisContext>
       </body>
     </html>
