@@ -1,12 +1,24 @@
+import { client } from "@/lib/contentful/client";
 import PackageCard from "../ui/PackageCard";
+import { IPackage, IPackageFields } from "@/lib/contentful/contentful";
 
-export default function PackagesList({ packages }: { packages: Package[] }) {
+export default async function PackagesList() {
+  const packagesData = (
+    await client.getEntries({
+      content_type: "package",
+    })
+  ).items as IPackage[];
+
+  const packages = packagesData.map(
+    (coach) => coach.fields
+  ) as IPackageFields[];
+
   return (
     <ul className="flex flex-col lg:flex-row w-full gap-8 lg:gap-[2vw]">
-      {packages.map(({ name, price, description, link, extras, color, id }) => (
-        <li key={id} className="w-full">
+      {packages.map(({ title, price, description, link, extras, color }) => (
+        <li key={title} className="w-full">
           <PackageCard
-            name={name}
+            name={title}
             price={price}
             description={description}
             extras={extras}
