@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://kick-bass.com/",
+    url: "https://kick-bass-website-topaz.vercel.app/",
     siteName: "Kick & Bass",
     images: [
       {
@@ -42,5 +42,5 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
-  metadataBase: new URL("https://kick-bass.com"),
+  metadataBase: new URL("https://kick-bass-website-topaz.vercel.app/"),
 };
