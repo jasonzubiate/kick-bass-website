@@ -107,8 +107,8 @@ export default async function Community() {
                   src="/icons/play.png"
                   alt="play"
                   fill
-                  objectFit="contain"
                   priority
+                  className="object-contain"
                 />
               </div>
 
@@ -123,8 +123,8 @@ export default async function Community() {
                   src="/icons/play.png"
                   alt="play"
                   fill
-                  objectFit="contain"
                   priority
+                  className="object-contain"
                 />
               </div>
 

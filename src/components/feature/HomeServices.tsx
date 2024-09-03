@@ -43,7 +43,7 @@ const ServiceCard = ({
     <li className="flex flex-col md:flex-row md:items-center w-full border-b py-16 lg:py-20 border-text-neutral-500">
       <div className="w-full flex justify-center md:w-5/12 lg:w-4/12 mb-8 md:mb-0">
         <div className="relative w-[150px] h-[150px] md:w-[160px] md:h-[160px] lg:w-[210px] lg:h-[210px]">
-          <Image src={image} alt={title} fill objectFit="contain" />
+          <Image src={image} alt={title} fill className="object-contain" />
         </div>
       </div>
 

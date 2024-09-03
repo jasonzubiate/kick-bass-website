@@ -1,13 +1,17 @@
-import { Package } from '@/payload-types';
-import PackageCard from '../ui/PackageCard';
+import { IPackageFields } from "@/lib/contentful/contentful";
+import PackageCard from "../ui/PackageCard";
 
-export default function PackagesList({ packages }: { packages: Package[] }) {
+export default function PackagesList({
+  packages,
+}: {
+  packages: IPackageFields[];
+}) {
   return (
     <ul className="flex flex-col lg:flex-row w-full gap-8 lg:gap-[2vw]">
-      {packages.map(({ name, price, description, link, extras, color, id }) => (
-        <li key={id} className="w-full">
+      {packages.map(({ title, price, description, link, extras, color }) => (
+        <li key={title} className="w-full">
           <PackageCard
-            name={name}
+            title={title}
             price={price}
             description={description}
             extras={extras}

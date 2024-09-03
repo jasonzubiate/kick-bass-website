@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 type PackageCardProps = {
-  name: string;
+  title: string;
   price: number;
   description: string | null | undefined;
   link: string | null | undefined;
@@ -11,7 +11,7 @@ type PackageCardProps = {
 };
 
 export default function PackageCard({
-  name,
+  title,
   price,
   description,
   link,
@@ -38,7 +38,7 @@ export default function PackageCard({
             className="text-[clamp(20px,1.6vw,28px)] mb-2 lg:mb-3"
             style={{ color: color as string }}
           >
-            K&B {name}
+            K&B {title}
           </h3>
 
           <div className="flex items-end">

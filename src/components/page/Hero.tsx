@@ -23,8 +23,7 @@ export default function Hero() {
                 src={"/stickers/fresh-mix-banner-pink.png"}
                 alt="Fresh Mix"
                 fill
-                objectFit="contain"
-                objectPosition="center"
+                className="object-contain object-center"
               />
             </div>
           </div>
@@ -35,8 +34,7 @@ export default function Hero() {
                 src={"/stickers/slide-blue.png"}
                 alt="Fresh Mix"
                 fill
-                objectFit="contain"
-                objectPosition="center"
+                className="object-contain object-center"
               />
             </div>
 

@@ -29,7 +29,7 @@ export default function CoachCard({
       <Image
         src={`https:${image.fields.file?.url as string}` || ""}
         alt={(image.fields.title as string) || "coach"}
-        layout="fill"
+        fill
         className="object-cover object-center absolute inset-0 z-0"
       />
 

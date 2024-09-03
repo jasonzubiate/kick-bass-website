@@ -27,8 +27,7 @@ export default function TesitmonialCard({
               src={`https:${testimonial.image.fields.file.url as string}` || ""}
               alt={(testimonial.image.fields.title as string) || "Review image"}
               fill
-              objectFit="cover"
-              objectPosition="center"
+              className="object-cover object-center"
             />
           </div>
         ) : null}

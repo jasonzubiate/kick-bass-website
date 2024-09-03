@@ -44,6 +44,7 @@ export default function Header() {
         href="/"
         className="fixed top-10 left-4 lg:left-8 2xl:left-12 z-40 mix-blend-difference"
       >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/icons/kick-bass-logo-white.png"
           alt="Kick & Bass"

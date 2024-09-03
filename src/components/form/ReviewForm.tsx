@@ -115,9 +115,7 @@ export default function ReviewForm({ toggleModal }: ReviewFormProps) {
                   src={imageUrl}
                   alt="product image"
                   fill
-                  objectFit="cover"
-                  objectPosition="center"
-                  className="pointer-events-none"
+                  className="pointer-events-none object-cover object-center"
                 />
               )}
             </div>

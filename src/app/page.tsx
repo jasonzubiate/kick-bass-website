@@ -11,11 +11,6 @@ import ReviewModal from "@/components/modal/ReviewModal";
 import ProductsList from "@/components/feature/ProductsList";
 import { TbArrowUpRight } from "react-icons/tb";
 
-const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-const publicUrl = vercelUrl
-  ? "https://" + vercelUrl
-  : process.env.PAYLOAD_PUBLIC_APP_URL;
-
 export default async function Home() {
   const copyData = (await client.getEntry(
     "1TFelseHZMcmDnqQj87Cmh"

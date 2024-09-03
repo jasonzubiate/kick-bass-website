@@ -18,8 +18,7 @@ export default function TeamMemberCard({
           src={image}
           alt={name}
           fill
-          objectFit="cover"
-          objectPosition="center"
+          className="object-cover object-center"
         />
       </div>
       <div className="flex flex-col">

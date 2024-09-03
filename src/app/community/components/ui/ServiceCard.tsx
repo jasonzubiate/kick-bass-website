@@ -87,7 +87,7 @@ export default function ServiceCard({
       className="service__card w-full h-full flex items-end rounded-2xl lg:rounded-[20px] p-3 2xl:p-4 bg-neutral-950 transition-colors duration-500 relative"
     >
       <div className="service__card__image absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-[40%] h-[30%] w-full transition-all duration-500">
-        <Image src={image} alt={title} fill objectFit="contain" />
+        <Image src={image} alt={title} fill className="object-contain" />
       </div>
 
       <div
