@@ -174,7 +174,7 @@ export default async function Community() {
                   {copy.extraOneHeader || "Rewards"}
                 </h4>
 
-                <p className="fluid-text--base text-neutral-500">
+                <p className="fluid-text--base text-neutral-500 max-w-[550px]">
                   {copy.extraOneBody ||
                     "Regular community giveaways and discounts on private lessons,production tools, and Kick & Bass store items."}
                 </p>
@@ -185,7 +185,7 @@ export default async function Community() {
                   {copy.extraTwoHeader || "Inflyte List"}
                 </h4>
 
-                <p className="fluid-text--base text-neutral-500">
+                <p className="fluid-text--base text-neutral-500 max-w-[550px]">
                   {copy.extraTwoBody ||
                     "Submit your music for a chance to be played by the biggest DJ's like John Summit, FISHER, Biscits, and more."}
                 </p>
@@ -196,7 +196,7 @@ export default async function Community() {
                   {copy.extraThreeHeader || "Pro Coaching"}
                 </h4>
 
-                <p className="fluid-text--base text-neutral-500">
+                <p className="fluid-text--base text-neutral-500 max-w-[550px]">
                   {copy.extraThreeBody ||
                     " Learn from active touring DJ's and producers that play at top festivals."}
                 </p>

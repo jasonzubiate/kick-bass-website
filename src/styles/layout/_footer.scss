@@ -1,0 +1,22 @@
+.footer-link,
+.footer-link--active {
+  @apply relative pb-1;
+}
+
+.footer-link::before,
+.footer-link--active::before {
+  @apply absolute block w-full h-[1px] mt-12 bottom-0 left-0 bg-neutral-950 scale-x-0 origin-top-left transition-transform duration-300;
+  content: "";
+}
+
+.footer-link::before {
+  @apply scale-x-0 origin-top-right;
+}
+
+.footer-link:hover::before {
+  @apply scale-x-100 origin-top-left;
+}
+
+.footer-link--active::before {
+  @apply scale-x-100 origin-top-right;
+}

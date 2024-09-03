@@ -12,13 +12,13 @@ td {
 }
 
 .faq__card {
-  @apply flex flex-col rounded-xl cursor-pointer bg-neutral-900 p-5 2xl:p-6 overflow-hidden;
+  @apply flex flex-col rounded-xl cursor-pointer bg-neutral-900 p-4 xl:p-5 overflow-hidden;
 
   button {
-    @apply flex items-center justify-center rounded-full bg-neutral-800 p-2 2xl:p-4 transition-transform;
+    @apply flex items-center justify-center rounded-full bg-neutral-800 p-2 xl:p-3 transition-transform;
 
     .faq__button__icon {
-      @apply text-hardLime h-5 w-5 2xl:h-8 2xl:w-8;
+      @apply text-hardLime h-5 w-5 2xl:h-6 2xl:w-6;
     }
   }
 }

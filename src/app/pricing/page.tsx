@@ -55,7 +55,7 @@ export default async function Pricing() {
 
         <section className="section section--medium--margin">
           <div className="flex flex-col items-center w-full gap-12 lg:gap-16">
-            <p className="text-neutral-400">
+            <p className="text-neutral-400 fluid-text--base">
               Plans can be changed or cancelled at any time
             </p>
 

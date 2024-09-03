@@ -23,7 +23,7 @@ export default function FeaturesList({
       <tbody>
         {features.map((feature, index) => (
           <tr key={index} className="table__row">
-            <td className="fluid-text--base">{feature.title}</td>
+            <td className="fluid-text--sm">{feature.title}</td>
 
             {packages.map((pkg, index) => {
               const hasFeature =
@@ -38,7 +38,7 @@ export default function FeaturesList({
                   className={`${index % 2 === 0 ? "bg-black" : ""}`}
                 >
                   <IoIosCheckmark
-                    className="text-[clamp(48px,3.5vw,128px)] mx-auto"
+                    className="text-[clamp(48px,2.5vw,108px)] mx-auto"
                     style={{
                       color: pkg.color as string,
                       opacity: hasFeature ? 1 : 0.2,

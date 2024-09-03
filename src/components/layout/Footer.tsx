@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="flex flex-col m-4 lg:m-8 bg-hardLime text-neutral-950 rounded-2xl lg:rounded-[20px] overflow-hidden">
         <div className="flex flex-col lg:flex-row">
           <div className="flex flex-col lg:w-4/12">
-            <div className="p-4 lg:p-6 2xl:p-12 border-b lg:border-r border-neutral-950">
+            <div className="p-4 lg:p-6 2xl:p-8 border-b lg:border-r border-neutral-950">
               <img
                 src="/icons/kick-bass-logo-black.png"
                 alt="Kick & Bass"
@@ -17,12 +17,12 @@ export default function Footer() {
               />
             </div>
 
-            <div className="p-4 lg:p-6 2xl:p-12 border-b lg:border-r lg:h-full border-neutral-950 lg:flex lg:items-center">
+            <div className="p-4 lg:p-6 2xl:p-8 border-b lg:border-r lg:h-full border-neutral-950 lg:flex lg:items-center">
               <h2 className="fluid-text--footer-header">Level up your music</h2>
             </div>
           </div>
 
-          <div className="flex flex-col items-start gap-8 lg:gap-16 p-4 lg:p-6 2xl:p-12 lg:w-8/12 border-b border-neutral-950">
+          <div className="flex flex-col items-start gap-8 lg:gap-16 p-4 lg:p-6 2xl:p-8 lg:w-8/12 border-b border-neutral-950">
             <div className="flex w-full justify-between">
               <img
                 src="/icons/lines-black.png"
@@ -62,7 +62,7 @@ export default function Footer() {
               >
                 <span className="text-sm lg:text-base mt-0.5">Join Now</span>
                 <div className="rounded-full bg-hardLime p-0.5 md:p-1">
-                  <TbArrowUpRight className="h-6 w-6 2xl:h-8 2xl:w-8 text-neutral-950" />
+                  <TbArrowUpRight className="h-6 w-6 text-neutral-950" />
                 </div>
               </a>
             </div>
@@ -70,13 +70,13 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col lg:flex-row">
-          <div className="flex w-full gap-4 2xl:gap-8 p-4 lg:p-6 2xl:p-12 lg:w-4/12 border-b lg:border-b-0 lg:border-r border-neutral-950">
+          <div className="flex w-full gap-4 lg:gap-6 p-4 lg:p-6 2xl:p-8 lg:w-4/12 border-b lg:border-b-0 lg:border-r border-neutral-950">
             <a
               href="https://www.instagram.com/kickbassofficial/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram Page"
-              className="p-3 2xl:p-5 bg-neutral-950 text-white text-lg rounded-full"
+              className="p-3 bg-neutral-950 text-white text-lg rounded-full"
             >
               <FaInstagram />
             </a>
@@ -85,7 +85,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok Page"
-              className="p-3 2xl:p-5 bg-neutral-950 text-white text-lg rounded-full"
+              className="p-3 bg-neutral-950 text-white text-lg rounded-full"
             >
               <FaTiktok />
             </a>
@@ -94,7 +94,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube Page"
-              className="p-3 2xl:p-5 bg-neutral-950 text-white text-lg rounded-full"
+              className="p-3 bg-neutral-950 text-white text-lg rounded-full"
             >
               <FaYoutube />
             </a>
@@ -103,28 +103,40 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook Page"
-              className="p-3 2xl:p-5 bg-neutral-950 text-white text-lg rounded-full"
+              className="p-3 bg-neutral-950 text-white text-lg rounded-full"
             >
               <FaFacebook />
             </a>
           </div>
-          <div className="flex items-start md:items-center w-full p-4 lg:p-6 2xl:p-12 lg:w-8/12 gap-8 lg:gap-0 md:justify-between">
+          <div className="flex items-start md:items-center w-full p-4 lg:p-6 2xl:p-8 lg:w-8/12 gap-8 lg:gap-0 md:justify-between">
             <div className="flex flex-col md:flex-row gap-4 lg:gap-8">
-              <Link href="/community" className="fluid-text--testimonial">
+              <Link
+                href="/community"
+                className="fluid-text--testimonial footer-link"
+              >
                 Community
               </Link>
-              <Link href="/coaches" className="fluid-text--testimonial">
+              <Link
+                href="/coaches"
+                className="fluid-text--testimonial footer-link"
+              >
                 Coaches
               </Link>
-              <Link href="/tutorials" className="fluid-text--testimonial">
+              <Link
+                href="/tutorials"
+                className="fluid-text--testimonial footer-link"
+              >
                 Tutorials
               </Link>
-              <Link href="/pricing" className="fluid-text--testimonial">
+              <Link
+                href="/pricing"
+                className="fluid-text--testimonial footer-link"
+              >
                 Pricing
               </Link>
               <a
                 href="https://kick-bass.store/"
-                className="fluid-text--testimonial"
+                className="fluid-text--testimonial footer-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
