@@ -28,6 +28,8 @@ export interface ICoachFields {
   socials?: Record<string, any> | undefined;
 }
 
+/** Individual coach to be displayed on the coaches page. */
+
 export interface ICoach extends Entry<ICoachFields> {
   sys: {
     id: string;
@@ -63,82 +65,6 @@ export interface ICoachesCopy extends Entry<ICoachesCopyFields> {
     contentType: {
       sys: {
         id: "coachesCopy";
-        linkType: "ContentType";
-        type: "Link";
-      };
-    };
-  };
-}
-
-export interface ICommunityCopyFields {
-  /** Intro Header */
-  introHeader: string;
-
-  /** Intro Paragraph */
-  introParagraph: string;
-
-  /** Services Header */
-  servicesHeader: string;
-
-  /** Service One Header */
-  serviceOneHeader: string;
-
-  /** Service One Description */
-  serviceOneDescription: string;
-
-  /** Service Two Header */
-  serviceTwoHeader: string;
-
-  /** Service Two Description */
-  serviceTwoDescription: string;
-
-  /** Service Three Header */
-  serviceThreeHeader: string;
-
-  /** Service Three Description */
-  serviceThreeDescription: string;
-
-  /** Service Four Header */
-  serviceFourHeader: string;
-
-  /** Service Four Description */
-  serviceFourDescription: string;
-
-  /** Extra One Header */
-  extraOneHeader: string;
-
-  /** Extra One Body */
-  extraOneBody: string;
-
-  /** Extra Two Header */
-  extraTwoHeader: string;
-
-  /** Extra Two Body */
-  extraTwoBody: string;
-
-  /** Extra Three Header */
-  extraThreeHeader: string;
-
-  /** Extra Three Body */
-  extraThreeBody: string;
-
-  /** About Header */
-  aboutHeader: string;
-
-  /** About Description */
-  aboutDescription: string;
-}
-
-export interface ICommunityCopy extends Entry<ICommunityCopyFields> {
-  sys: {
-    id: string;
-    type: string;
-    createdAt: string;
-    updatedAt: string;
-    locale: string;
-    contentType: {
-      sys: {
-        id: "communityCopy";
         linkType: "ContentType";
         type: "Link";
       };
@@ -199,33 +125,6 @@ export interface IFeature extends Entry<IFeatureFields> {
 export interface IHomeCopyFields {
   /** Hero Description */
   heroDescription: string;
-
-  /** Services Header */
-  servicesHeader: string;
-
-  /** Service One Header */
-  serviceOneHeader: string;
-
-  /** Service One Description */
-  serviceOneDescription: string;
-
-  /** Service Two Header */
-  serviceTwoHeader: string;
-
-  /** Service Two Description */
-  serviceTwoDescription: string;
-
-  /** Service Three Header */
-  serviceThreeHeader: string;
-
-  /** Service Three Description */
-  serviceThreeDescription: string;
-
-  /** Service Four Header */
-  serviceFourHeader: string;
-
-  /** Service Four Description */
-  serviceFourDescription: string;
 
   /** Coaches Header */
   coachesHeader: string;
@@ -299,6 +198,48 @@ export interface IPackage extends Entry<IPackageFields> {
     contentType: {
       sys: {
         id: "package";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface IServiceFields {
+  /** Title */
+  title: string;
+
+  /** Description */
+  description: string;
+
+  /** Color */
+  color: string;
+
+  /** Video */
+  video?: Asset | undefined;
+
+  /** Details (List) */
+  detailsList?: string[] | undefined;
+
+  /** Order */
+  order: number;
+
+  /** Sticker */
+  sticker: Asset;
+}
+
+/** This is for a service card that is shown on the homepage. */
+
+export interface IService extends Entry<IServiceFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "service";
         linkType: "ContentType";
         type: "Link";
       };
@@ -452,11 +393,11 @@ export interface ITutorialsCopy extends Entry<ITutorialsCopyFields> {
 export type CONTENT_TYPE =
   | "coach"
   | "coachesCopy"
-  | "communityCopy"
   | "faq"
   | "feature"
   | "homeCopy"
   | "package"
+  | "service"
   | "shopifyCollection"
   | "teamMember"
   | "testimonial"
@@ -466,11 +407,11 @@ export type CONTENT_TYPE =
 export type IEntry =
   | ICoach
   | ICoachesCopy
-  | ICommunityCopy
   | IFaq
   | IFeature
   | IHomeCopy
   | IPackage
+  | IService
   | IShopifyCollection
   | ITeamMember
   | ITestimonial

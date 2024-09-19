@@ -21,7 +21,6 @@ const modalVariants = {
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/community", label: "Community" },
   { href: "/coaches", label: "Coaches" },
   { href: "/tutorials", label: "Tutorials" },
   { href: "/pricing", label: "Pricing" },

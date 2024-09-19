@@ -3,13 +3,13 @@ import { client } from "@/lib/contentful/client";
 import Hero from "@/components/page/Hero";
 import { IHomeCopy, IHomeCopyFields } from "@/lib/contentful/contentful";
 import PackagesList from "@/components/feature/PackagesList";
-import HomeServices from "@/components/feature/HomeServices";
 import SectionHeader from "@/components/layout/SectionHeader";
 import CoachesList from "@/components/feature/CoachesList";
 import TestimonialsList from "@/components/feature/TestimonialsList";
 import ReviewModal from "@/components/modal/ReviewModal";
 import ProductsList from "@/components/feature/ProductsList";
 import { TbArrowUpRight } from "react-icons/tb";
+import ServicesList from "@/components/feature/ServicesList";
 
 export default async function Home() {
   const copyData = (await client.getEntry(
@@ -17,33 +17,6 @@ export default async function Home() {
   )) as IHomeCopy;
 
   const copy = copyData.fields as IHomeCopyFields;
-
-  const services = [
-    {
-      title: copy.serviceOneHeader,
-      description: copy.serviceOneDescription,
-      image: "/stickers/slide-blue.png",
-      color: "#6d77ff",
-    },
-    {
-      title: copy.serviceTwoHeader,
-      description: copy.serviceTwoDescription,
-      image: "/stickers/vinyl-hand-lime.png",
-      color: "#a6ff00",
-    },
-    {
-      title: copy.serviceThreeHeader,
-      description: copy.serviceThreeDescription,
-      image: "/stickers/vinyl-pink.png",
-      color: "#ff48c9",
-    },
-    {
-      title: copy.serviceFourHeader,
-      description: copy.serviceFourDescription,
-      image: "/stickers/wet-danceflor.png",
-      color: "#fff000",
-    },
-  ];
 
   return (
     <main>
@@ -64,14 +37,14 @@ export default async function Home() {
       <section className="section section--medium--margin">
         <div className="padding-container">
           <div className="content-container">
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 mb-12">
               <div className="kick-bass-square bg-neutral-50 animate-pulse" />
               <h2 className="offbit-101-bold uppercase tracking-wide fluid-text--base">
                 Our Services
               </h2>
             </div>
 
-            <HomeServices services={services} />
+            <ServicesList />
           </div>
         </div>
       </section>

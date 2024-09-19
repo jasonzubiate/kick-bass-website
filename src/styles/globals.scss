@@ -32,3 +32,23 @@
 .kick-bass-square {
   @apply h-[clamp(14px,2vw,20px)] w-[clamp(8px,0.8vw,10px)];
 }
+
+.service-card {
+  &:hover {
+    .service-card__image {
+      @apply scale-0;
+    }
+
+    .service-card__content {
+      @apply h-full;
+    }
+
+    .service-card__title {
+      @apply text-3xl lg:text-4xl 2xl:text-5xl;
+    }
+
+    .service-card__icon {
+      @apply rotate-180;
+    }
+  }
+}
