@@ -129,11 +129,17 @@ export interface IHomeCopyFields {
   /** Coaches Header */
   coachesHeader: string;
 
-  /** Coaches Paragraph Header */
-  coachesParagraphHeader: string;
+  /** Coaches Paragraph Header One */
+  coachesParagraphHeaderOne: string;
 
-  /** Coaches Paragraph Body */
-  coachesParagraphBody: string;
+  /** Coaches Paragraph Body One */
+  coachesParagraphBodyOne: string;
+
+  /** Coaches Paragraph Header Two */
+  coachesParagraphHeaderTwo: string;
+
+  /** Coaches Paragraph Body Two */
+  coachesParagraphBodyTwo: string;
 
   /** Testimonials Headers */
   testimonialsHeaders: string;
@@ -146,6 +152,9 @@ export interface IHomeCopyFields {
 
   /** Email Listing Description */
   emailListingDescription: string;
+
+  /** Coaches Paragraph Body 2 */
+  coachesParagraphBody2?: string | undefined;
 }
 
 export interface IHomeCopy extends Entry<IHomeCopyFields> {
