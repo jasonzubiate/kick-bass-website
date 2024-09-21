@@ -23,11 +23,38 @@ export default async function CoachesList() {
     return categoryOrder[a.category] - categoryOrder[b.category];
   });
 
+  const mainCoaches = coaches.filter(
+    (coach) => coach.category === "Main" || coach.category === "Head"
+  );
+  const guestCoaches = coaches.filter((coach) => coach.category === "Guest");
+
   return (
-    <>
-      <CoachesListOne coaches={coaches} />
-      <CoachesListTwo coaches={coaches} />
-      <CoachesListFour coaches={coaches} />
-    </>
+    <div>
+      <div className="mb-16 lg:mb-20">
+        <div className="flex items-center gap-1.5 text-white mb-6 lg:mb-12">
+          <div className={`kick-bass-square bg-white animate-pulse`} />
+          <h2 className="offbit-101-bold uppercase tracking-wide fluid-text--base">
+            Coaches
+          </h2>
+        </div>
+
+        <CoachesListOne coaches={mainCoaches} />
+        <CoachesListTwo coaches={mainCoaches} marginTop="12vw" />
+        <CoachesListFour coaches={mainCoaches} marginTop="4vw" />
+      </div>
+
+      <div className="mb-16 lg:mb-20">
+        <div className="flex items-center gap-1.5 text-white mb-6 lg:mb-12">
+          <div className={`kick-bass-square bg-white animate-pulse`} />
+          <h2 className="offbit-101-bold uppercase tracking-wide fluid-text--base">
+            Guest Appearances
+          </h2>
+        </div>
+
+        <CoachesListOne coaches={guestCoaches} />
+        <CoachesListTwo coaches={guestCoaches} marginTop="30vw" />
+        <CoachesListFour coaches={guestCoaches} marginTop="9vw" />
+      </div>
+    </div>
   );
 }

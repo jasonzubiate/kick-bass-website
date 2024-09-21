@@ -6,8 +6,10 @@ import { ICoachFields } from "@/lib/contentful/contentful";
 
 export default function CoachesListFourColumns({
   coaches,
+  marginTop,
 }: {
   coaches: ICoachFields[];
+  marginTop: string;
 }) {
   const evenColumnsRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -43,7 +45,8 @@ export default function CoachesListFourColumns({
               evenColumnsRefs.current[columnIndex] = el as HTMLDivElement;
             }
           }}
-          className={`column ${columnIndex % 2 !== 1 ? "mt-[5vw]" : ""}`}
+          style={columnIndex % 2 !== 1 ? { marginTop } : {}}
+          className="column"
         >
           {column.map(({ title, category, image, slug }) => (
             <div key={title} className="mt-[1vw] h-[28vw] max-h-[550px]">

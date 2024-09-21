@@ -29,7 +29,7 @@ export default async function Coaches() {
           <CoachesList />
         </section>
 
-        <section className="mt-8 mb-24 lg:mt-0 lg:mb-48">
+        <section className="mt-8 md:-mt-[35vw] xl:-mt-[8vw] 2xl:mt-0 mb-24 lg:mb-48">
           <div className="section-header-group">
             <div className="flex items-center gap-1.5 text-white">
               <div className={`kick-bass-square bg-white animate-pulse`} />

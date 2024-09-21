@@ -4,7 +4,13 @@ import { useEffect, useRef } from "react";
 import CoachCard from "../ui/CoachCard";
 import { ICoachFields } from "@/lib/contentful/contentful";
 
-export default function CoachesListTwoColumns({ coaches }: { coaches: ICoachFields[] }) {
+export default function CoachesListTwoColumns({
+  coaches,
+  marginTop,
+}: {
+  coaches: ICoachFields[];
+  marginTop: string;
+}) {
   const evenColumnsRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const columns: any[][] = [[], []];
@@ -39,7 +45,8 @@ export default function CoachesListTwoColumns({ coaches }: { coaches: ICoachFiel
               evenColumnsRefs.current[columnIndex] = el;
             }
           }}
-          className={`column ${columnIndex % 2 !== 1 ? "mt-28" : ""}`}
+          style={columnIndex % 2 !== 1 ? { marginTop } : {}}
+          className="column"
         >
           {column.map(({ title, category, image, slug }) => (
             <div key={title} className="mt-[2vw] h-[54vw]">
