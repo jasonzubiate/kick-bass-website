@@ -13,7 +13,7 @@ export default function TestimonialCarousel({
 
   return (
     <div className="relative mb-12 lg:mb-24">
-      <div ref={emblaRef}>
+      <div ref={emblaRef} className="overflow-hidden">
         <ul className="flex pl-4 lg:pl-6 2xl:pl-[4vw] cursor-grab">
           {testimonials.map((review, index) => (
             <li

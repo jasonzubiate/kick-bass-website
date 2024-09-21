@@ -64,7 +64,7 @@ export default function ServiceCard({
     >
       <div className="service-card__image absolute top-[35%] 2xl:top-[40%] left-1/2 -translate-x-1/2 -translate-y-[40%] h-[128px] w-[128px] lg:h-[144px] lg:w-[144px] 2xl:h-[164px] 2xl:w-[164px] rotate-6 transition-all duration-500">
         <Image
-          src={"https://" + sticker}
+          src={`https:${sticker}`}
           alt={title}
           fill
           className="object-contain"
