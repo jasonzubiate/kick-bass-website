@@ -12,7 +12,7 @@ export default async function Coaches() {
   return (
     <div className="padding-container">
       <div className="content-container">
-        <h1 className="pt-[260px] uppercase flex flex-col gap-1 md:gap-2 leading-none">
+        <h1 className="pt-[220px] xl:pt-[260px] uppercase flex flex-col gap-1 md:gap-2 leading-none">
           <span className="md:hidden">Coaches</span>
           <span className="w-full text-end md:hidden">That Know</span>
           <span className="md:hidden">

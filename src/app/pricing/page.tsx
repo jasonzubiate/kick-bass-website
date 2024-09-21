@@ -43,7 +43,7 @@ export default async function Pricing() {
   return (
     <div className="padding-container">
       <div className="content-container">
-        <section className="pt-[260px]">
+        <section className="pt-[220px] xl:pt-[260px]">
           <h1 className="w-full text-center uppercase leading-none">
             Join Kick & Bass
           </h1>

@@ -68,7 +68,7 @@ export default function Header() {
         </a>
       </div>
 
-      <div className="fixed top-10 right-4 flex items-center gap-2 z-50">
+      <div className="fixed top-10 right-4 lg:right-6 flex items-center gap-2 z-50">
         <MenuButton isActive={isMenuOpen} setIsActive={setIsMenuOpen} />
         <MenuModal
           isMenuOpen={isMenuOpen}
