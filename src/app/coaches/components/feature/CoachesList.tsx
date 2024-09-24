@@ -34,7 +34,7 @@ export default async function CoachesList() {
         <div className="flex items-center gap-1.5 text-white mb-6 lg:mb-12">
           <div className={`kick-bass-square bg-white animate-pulse`} />
           <h2 className="offbit-101-bold uppercase tracking-wide fluid-text--base">
-            Coaches
+            Main Coaches
           </h2>
         </div>
 

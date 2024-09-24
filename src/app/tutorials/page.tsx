@@ -24,7 +24,7 @@ export default async function Page() {
   return (
     <div id="tutorials" className="flex flex-col gap-24 pt-36 mb-20">
       <div className="padding-container">
-        <p className="fluid-text--base w-full lg:w-4/12 max-w-[700px]">
+        <p className="fluid-text--base w-full lg:w-5/12 2xl:w-4/12 max-w-[700px]">
           {data.paragraph ||
             "Watch weekly tech house tutorials, track breakdowns, and expert production techniques to elevate your house music production skills."}
         </p>

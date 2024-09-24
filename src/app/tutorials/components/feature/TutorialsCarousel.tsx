@@ -113,8 +113,10 @@ export default function TutorialsCarousel({
         if (video) {
           if (index === currentSlide) {
             video.muted = isMuted;
+            video.play();
           } else {
             video.muted = true;
+            video.pause();
           }
         }
       });
@@ -168,7 +170,6 @@ export default function TutorialsCarousel({
                 }}
                 src={video.fields.file?.url as string}
                 className="slide__video pointer-events-none"
-                autoPlay
                 muted
                 loop
                 controlsList="noremoteplayback nofullscreen"
