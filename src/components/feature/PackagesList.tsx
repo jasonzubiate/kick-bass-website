@@ -13,6 +13,8 @@ export default async function PackagesList() {
     (coach) => coach.fields
   ) as IPackageFields[];
 
+  packages.sort((a, b) => a.price - b.price);
+
   return (
     <ul className="flex flex-col lg:flex-row w-full gap-8 lg:gap-[2vw]">
       {packages.map(({ title, price, description, link, extras, color }) => (

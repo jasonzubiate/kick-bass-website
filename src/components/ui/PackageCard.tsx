@@ -57,7 +57,7 @@ export default function PackageCard({
           </div>
         </div>
 
-        <p className="text-neutral-400 lg:mb-0 lg:h-[9vw] xl:h-[7vw] 2xl:h-[120px] text-[clamp(16px,1vw,20px)] xl:leading-relaxed mb-6 xl:mb-0">
+        <p className="text-neutral-400 lg:mb-0 lg:h-[7vw] 2xl:h-24 text-[clamp(16px,1vw,20px)] xl:leading-relaxed mb-6 xl:mb-0">
           {description}
         </p>
       </div>
