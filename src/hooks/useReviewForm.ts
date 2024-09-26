@@ -59,7 +59,6 @@ export function useReviewForm(toggleModal: Dispatch<SetStateAction<boolean>>) {
   );
 
   const handleSubmit = async () => {
-    setSubmitting(true);
     const formErrors = validateForm(formData);
     if (Object.values(formErrors).some((error) => error)) {
       setErrors(formErrors);
@@ -74,6 +73,8 @@ export function useReviewForm(toggleModal: Dispatch<SetStateAction<boolean>>) {
     newFormData.append("review", formData.review);
 
     try {
+      setSubmitting(true);
+
       const response = await fetch("/api/review", {
         method: "POST",
         body: newFormData,
