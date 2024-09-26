@@ -121,8 +121,14 @@ export interface IFeature extends Entry<IFeatureFields> {
 }
 
 export interface IHomeCopyFields {
-  /** Hero Description */
-  heroDescription: string;
+  /** Home Copy */
+  homeCopy?: string | undefined;
+
+  /** Hero Description One */
+  heroDescriptionOne: string;
+
+  /** Hero Description Two */
+  heroDescriptionTwo: string;
 
   /** Coaches Header */
   coachesHeader: string;
@@ -132,12 +138,6 @@ export interface IHomeCopyFields {
 
   /** Coaches Paragraph Body One */
   coachesParagraphBodyOne: string;
-
-  /** Coaches Paragraph Header Two */
-  coachesParagraphHeaderTwo: string;
-
-  /** Coaches Paragraph Body Two */
-  coachesParagraphBodyTwo: string;
 
   /** Testimonials Headers */
   testimonialsHeaders: string;
@@ -150,9 +150,6 @@ export interface IHomeCopyFields {
 
   /** Email Listing Description */
   emailListingDescription: string;
-
-  /** Coaches Paragraph Body 2 */
-  coachesParagraphBody2?: string | undefined;
 }
 
 export interface IHomeCopy extends Entry<IHomeCopyFields> {

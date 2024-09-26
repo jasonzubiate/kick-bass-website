@@ -22,7 +22,10 @@ export default async function Home() {
     <main>
       <div className="padding-container">
         <div className="content-container">
-          <Hero />
+          <Hero
+            descriptionOne={copy.heroDescriptionOne}
+            descriptionTwo={copy.heroDescriptionTwo}
+          />
         </div>
       </div>
 
@@ -59,26 +62,14 @@ export default async function Home() {
           <CoachesList />
 
           <div className="padding-container">
-            <div className="flex flex-col lg:flex-row lg:justify-between gap-12 lg:gap-0">
-              <div className="lg:w-5/12 2xl:w-4/12">
-                <h4 className="polysans-median fluid-text--base mb-2 xl:mb-4">
-                  {copy.coachesParagraphHeaderOne || "Head Coaches"}
-                </h4>
-                <p className="fluid-text--base text-neutral-500">
-                  {copy.coachesParagraphBodyOne ||
-                    "Our head coaches are industry leaders—touring DJs, chart-topping producers, and expert sound engineers. They bring real-world experience to your sessions, offering deep insights into House, Tech House, and Minimal House production. With their guidance, you’re learning from the best."}
-                </p>
-              </div>
-
-              <div className="lg:w-5/12 2xl:w-4/12">
-                <h4 className="polysans-median fluid-text--base mb-2 xl:mb-4">
-                  {copy.coachesParagraphHeaderTwo || "Guest Appearances"}
-                </h4>
-                <p className="fluid-text--base text-neutral-500">
-                  {copy.coachesParagraphBodyTwo ||
-                    "Kick and Bass regularly hosts guest coaches from the top tiers of the industry. These professionals, including renowned artists and A&Rs, share unique perspectives and cutting-edge techniques, giving you fresh, insider knowledge in every session."}
-                </p>
-              </div>
+            <div className="lg:w-5/12 2xl:w-4/12">
+              <h4 className="polysans-median fluid-text--base mb-2 xl:mb-4">
+                {copy.coachesParagraphHeaderOne || "Head Coaches"}
+              </h4>
+              <p className="fluid-text--base text-neutral-500">
+                {copy.coachesParagraphBodyOne ||
+                  "Our head coaches are industry leaders—touring DJs, chart-topping producers, and expert sound engineers. They bring real-world experience to your sessions, offering deep insights into House, Tech House, and Minimal House production. With their guidance, you’re learning from the best."}
+              </p>
             </div>
           </div>
         </div>
