@@ -1,3 +1,4 @@
+import HotjarScript from "@/lib/hotjar/HotjarScript";
 import { Analytics } from "@vercel/analytics/react";
 import LenisContext from "@/contexts/LenisContext";
 import { metadata } from "../../metadata";
@@ -24,6 +25,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <Analytics />
+          <HotjarScript />
         </LenisContext>
       </body>
     </html>
