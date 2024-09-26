@@ -1,3 +1,4 @@
+import { TbStar, TbStarFilled } from "react-icons/tb";
 import Image from "next/image";
 import { ITestimonialFields } from "@/lib/contentful/contentful";
 
@@ -13,13 +14,27 @@ export default function TesitmonialCard({
     return text;
   };
 
-  const truncatedReviewText = truncateText(testimonial.review, 360);
+  const truncatedReviewText = truncateText(testimonial.review, 500);
 
   return (
-    <div className="flex flex-col gap-24 rounded-2xl lg:rounded-[20px] 2xl:rounded-[24px] p-4 lg:p-6 2xl:p-8 bg-neutral-900 w-full">
-      <p className="fluid-text--testimonial">
-        &quot;{truncatedReviewText}&quot;
-      </p>
+    <div className="flex flex-col gap-8 2xl:gap-12 p-4 lg:p-6 2xl:p-8 w-[clamp(250px,22vw,400px)] rounded-2xl lg:rounded-[20px] 2xl:rounded-[24px] bg-neutral-900">
+      <div className="flex flex-col gap-4">
+        <p className="fluid-text--testimonial">
+          &quot;{truncatedReviewText}&quot;
+        </p>
+        {
+          <div className="flex gap-1">
+            {[1, 2, 3, 4, 5].map((star) =>
+              star <= testimonial.stars ? (
+                <TbStarFilled key={star} className="text-hardLime" />
+              ) : (
+                <TbStar key={star} className="text-hardLime" />
+              )
+            )}
+          </div>
+        }
+      </div>
+
       <div className="flex gap-3 items-center">
         {testimonial.image?.fields?.file?.url ? (
           <div className="relative rounded-full h-10 w-10 xl:w-12 xl:h-12 overflow-hidden">

@@ -28,8 +28,6 @@ export interface ICoachFields {
   socials?: Record<string, any> | undefined;
 }
 
-/** Individual coach to be displayed on the coaches page. */
-
 export interface ICoach extends Entry<ICoachFields> {
   sys: {
     id: string;
@@ -237,8 +235,6 @@ export interface IServiceFields {
   sticker: Asset;
 }
 
-/** This is for a service card that is shown on the homepage. */
-
 export interface IService extends Entry<IServiceFields> {
   sys: {
     id: string;
@@ -330,6 +326,9 @@ export interface ITestimonialFields {
 
   /** Approved */
   approved: boolean;
+
+  /** Stars */
+  stars: number;
 }
 
 export interface ITestimonial extends Entry<ITestimonialFields> {

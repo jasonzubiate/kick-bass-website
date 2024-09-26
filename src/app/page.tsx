@@ -94,10 +94,8 @@ export default async function Home() {
 
         <TestimonialsList />
 
-        <div className="padding-container">
-          <div className="content-container">
-            <ReviewModal />
-          </div>
+        <div className="padding-container mt-16">
+          <ReviewModal />
         </div>
       </section>
 

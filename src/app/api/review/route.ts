@@ -1,45 +1,96 @@
+"use server";
+
 import { NextResponse } from "next/server";
 import { managementClient } from "@/lib/contentful/managementClient";
 
 export async function POST(req: Request) {
   try {
+    // Parse form data
     const formData = await req.formData();
+
+    // Extract the form data fields
+    const image = formData.get("image") as File | null; // Get the image as a File object
     const author = formData.get("author") as string;
     const joined = formData.get("joined") as string;
+    const rating = formData.get("rating") as string;
     const review = formData.get("review") as string;
 
-    if (!author || !joined || !review) {
+    // Debug log to check data structure
+    console.log(formData);
+
+    // Ensure we have an image file
+    if (image && typeof image === "object") {
+      // Convert Blob (File) to ArrayBuffer and then to Buffer
+      const arrayBuffer = await image.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+
+      // Get Contentful environment
+      const space = await managementClient.getSpace(
+        process.env.CONTENTFUL_SPACE_ID as string
+      );
+      const environment = await space.getEnvironment("master");
+
+      // Upload the image to Contentful
+      const upload = await environment.createUpload({ file: buffer });
+
+      // Create the asset in Contentful
+      let asset = await environment.createAsset({
+        fields: {
+          title: {
+            "en-US": `Review image by ${author}`,
+          },
+          file: {
+            "en-US": {
+              contentType: image.type, // Image content type
+              fileName: image.name, // Image file name
+              uploadFrom: {
+                sys: {
+                  type: "Link",
+                  linkType: "Upload",
+                  id: upload.sys.id,
+                },
+              },
+            },
+          },
+        },
+      });
+
+      // Process and publish the asset
+      asset = await asset.processForAllLocales();
+      asset = await asset.publish();
+
+      // Create and publish the review entry with the image asset
+      const entry = await environment.createEntry("testimonial", {
+        fields: {
+          author: { "en-US": author },
+          joined: { "en-US": joined },
+          rating: { "en-US": parseInt(rating) },
+          review: { "en-US": review },
+          image: {
+            "en-US": {
+              sys: { type: "Link", linkType: "Asset", id: asset.sys.id },
+            },
+          },
+        },
+      });
+
+      await entry.publish();
+
+      // Return success response
       return NextResponse.json(
-        { error: "Missing required fields" },
+        { message: "Review submitted successfully" },
+        { status: 200 }
+      );
+    } else {
+      // If no image was uploaded, return an error
+      console.error("No valid image file found");
+      return NextResponse.json(
+        { error: "No valid image file found" },
         { status: 400 }
       );
     }
-
-    const space = await managementClient.getSpace(
-      process.env.CONTENTFUL_SPACE_ID as string
-    );
-    const environment = await space.getEnvironment("master");
-
-    // Prepare the entry fields without the image field
-    const entryFields = {
-      author: { "en-US": author },
-      joined: { "en-US": joined },
-      review: { "en-US": review },
-      approved: { "en-US": false }, // Default to false until approved
-    };
-
-    // Create the entry with the prepared fields
-    const entry = await environment.createEntry("testimonial", {
-      fields: entryFields,
-    });
-
-    await entry.publish();
-
-    return NextResponse.json(
-      { message: "Review submitted successfully!" },
-      { status: 200 }
-    );
   } catch (error) {
+    // Log and return any errors that occurred during submission
     console.error("Error submitting review:", error);
     return NextResponse.json(
       { error: "Error submitting review" },

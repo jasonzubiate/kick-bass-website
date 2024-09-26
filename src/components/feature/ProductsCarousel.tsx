@@ -18,8 +18,8 @@ export default function ProductsCarousel({
   const [emblaRef] = useEmblaCarousel({ dragFree: true });
 
   return (
-    <div className="embla pl-4 lg:pl-8 2xl:pl-12">
-      <div className="overflow-hidden" ref={emblaRef}>
+    <div className="embla">
+      <div ref={emblaRef} className="overflow-hidden pl-4 lg:pl-8 2xl:pl-12">
         <ul className="flex">
           {products.map((product) => (
             <li className="mr-[3vw] xl:mr-[1.5vw]" key={product.name}>

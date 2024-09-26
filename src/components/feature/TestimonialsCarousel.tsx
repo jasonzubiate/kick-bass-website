@@ -12,17 +12,15 @@ export default function TestimonialCarousel({
   const [emblaRef] = useEmblaCarousel({ dragFree: true });
 
   return (
-    <div className="relative mb-12 lg:mb-24">
-      <div ref={emblaRef} className="overflow-hidden">
-        <ul className="flex pl-4 lg:pl-6 2xl:pl-[4vw] cursor-grab">
+    <div className="embla">
+      <div ref={emblaRef} className="overflow-hidden pl-4 lg:pl-8 2xl:pl-12">
+        <ul className="flex cursor-grab">
           {testimonials.map((review, index) => (
             <li
-              className={`${index % 2 === 1 ? "mt-[10vw] lg:mt-[4vw]" : ""}`}
+              className={`${index % 2 === 1 ? "mt-[10vw] lg:mt-[4vw]" : ""} mr-[3vw] xl:mr-[1.5vw]`}
               key={index}
             >
-              <div className="mr-[4vw] lg:mr-[1.5vw] min-h-[400px] h-[24vw] w-[250px] xl:w-[22vw] 2xl:w-[18vw]">
-                <TesitmonialCard testimonial={review} />
-              </div>
+              <TesitmonialCard testimonial={review} />
             </li>
           ))}
         </ul>

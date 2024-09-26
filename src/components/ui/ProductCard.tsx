@@ -18,6 +18,7 @@ export default function ProductCard({ product }: { product: Product }) {
       >
         <Image src={product.image} alt={product.name} fill />
       </a>
+      
       <div className="flex flex-col">
         <p className="fluid-text--sm">{product.name}</p>
         <p className="fluid-text--sm text-neutral-400  polysans-neutral-mono">
