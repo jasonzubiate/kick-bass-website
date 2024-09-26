@@ -26,7 +26,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <section className="mx-auto">
+      <section className="section--small--margin">
         <div className="padding-container">
           <div className="content-container">
             <PackagesList />

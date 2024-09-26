@@ -327,8 +327,8 @@ export interface ITestimonialFields {
   /** Approved */
   approved: boolean;
 
-  /** Stars */
-  stars: number;
+  /** Rating */
+  rating: number;
 }
 
 export interface ITestimonial extends Entry<ITestimonialFields> {

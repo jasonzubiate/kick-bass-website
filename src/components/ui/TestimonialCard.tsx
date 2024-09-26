@@ -25,7 +25,7 @@ export default function TesitmonialCard({
         {
           <div className="flex gap-1">
             {[1, 2, 3, 4, 5].map((star) =>
-              star <= testimonial.stars ? (
+              star <= testimonial.rating ? (
                 <TbStarFilled key={star} className="text-hardLime" />
               ) : (
                 <TbStar key={star} className="text-hardLime" />
