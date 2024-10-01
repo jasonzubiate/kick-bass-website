@@ -11,8 +11,10 @@ export default async function TeamMemberList() {
     (member) => member.fields
   ) as ITeamMemberFields[];
 
+  teamMembers.sort((a, b) => a.order - b.order);
+
   return (
-    <ul className="flex gap-4 w-full xl:w-8/12 justify-center xl:justify-end flex-wrap mt-16 xl:mt-0">
+    <ul className="flex flex-wrap items-start justify-center gap-2 md:gap-4 2xl:gap-6 w-full lg:w-7/12 mx-auto">
       {teamMembers.map((member) => (
         <TeamMemberCard
           key={member.title}

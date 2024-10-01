@@ -1,7 +1,12 @@
 import Image from "next/image";
 import { client } from "@/lib/contentful/client";
 import Hero from "@/components/page/Hero";
-import { IHomeCopy, IHomeCopyFields } from "@/lib/contentful/contentful";
+import {
+  IHomeCopy,
+  IHomeCopyFields,
+  ITeamMember,
+  ITeamMemberFields,
+} from "@/lib/contentful/contentful";
 import PackagesList from "@/components/feature/PackagesList";
 import SectionHeader from "@/components/layout/SectionHeader";
 import CoachesList from "@/components/feature/CoachesList";
@@ -10,6 +15,8 @@ import ReviewModal from "@/components/modal/ReviewModal";
 import ProductsList from "@/components/feature/ProductsList";
 import { TbArrowUpRight } from "react-icons/tb";
 import ServicesList from "@/components/feature/ServicesList";
+import TeamMemberList from "@/components/feature/TeamMemberList";
+import Globe from "@/components/ui/Globe";
 
 export default async function Home() {
   const copyData = (await client.getEntry(
@@ -96,6 +103,16 @@ export default async function Home() {
         </div>
 
         <ProductsList />
+      </section>
+
+      <section className="relative">
+        <div className="padding-container z-10 absolute flex flex-col items-center justify-center h-full">
+          <SectionHeader header={"Our Team"} color="white" />
+
+          <TeamMemberList />
+        </div>
+
+        <Globe />
       </section>
 
       <section className="section section--medium--margin">

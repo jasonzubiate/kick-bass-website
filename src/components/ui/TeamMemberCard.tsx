@@ -12,7 +12,7 @@ export default function TeamMemberCard({
   role,
 }: TeamMemberCardProps) {
   return (
-    <div className="flex items-center gap-4 rounded-xl bg-neutral-900 px-5 py-4">
+    <div className="flex items-center gap-4 rounded-xl bg-neutral-900 p-4">
       <div className="rounded-full w-10 h-10 xl:w-12 xl:h-12 2xl:w-16 2xl:h-16 relative overflow-hidden">
         <Image
           src={image}

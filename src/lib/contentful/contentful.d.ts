@@ -289,6 +289,9 @@ export interface ITeamMemberFields {
 
   /** Image */
   image: Asset;
+
+  /** Order */
+  order: number;
 }
 
 export interface ITeamMember extends Entry<ITeamMemberFields> {
