@@ -3,10 +3,9 @@ import Link from "next/link";
 
 type HeroProps = {
   descriptionOne: string;
-  descriptionTwo: string;
 };
 
-export default function Hero({ descriptionOne, descriptionTwo }: HeroProps) {
+export default function Hero({ descriptionOne }: HeroProps) {
   return (
     <div className="h-screen flex items-center pt-32 lg:pt-[10vw] 2xl:pt-[7vw]">
       <div className="flex flex-col gap-12 lg:gap-24 w-full">
@@ -59,24 +58,16 @@ export default function Hero({ descriptionOne, descriptionTwo }: HeroProps) {
         </h1>
 
         <div className="flex flex-col md:flex-row gap-28 lg:gap-0 w-full justify-between items-start md:items-center">
-          <div className="flex flex-col gap-4">
-            <div className="flex items-start md:items-center gap-1.5 text-white">
-              <div className="w-2 lg:w-3 h-4 lg:h-5 bg-white animate-pulse" />
-              <h2 className="offbit-101-bold uppercase tracking-wide fluid-text--base">
-                {descriptionOne}
-              </h2>
-            </div>
-            <div className="lg:ml-8 flex items-start md:items-center gap-1.5 text-white">
-              <div className="w-2 lg:w-3 h-4 lg:h-5 bg-white animate-pulse" />
-              <h2 className="offbit-101-bold uppercase tracking-wide fluid-text--base">
-                {descriptionTwo}
-              </h2>
-            </div>
+          <div className="flex items-start gap-1.5">
+            <div className="w-2 lg:w-3 h-4 lg:h-5 bg-white animate-pulse" />
+            <h2 className="text-white offbit-101-bold uppercase tracking-wide fluid-text--base w-4/5 lg:max-w-[600px]">
+              {descriptionOne}
+            </h2>
           </div>
 
           <Link
             href="/pricing"
-            className="px-10 py-3 rounded-full w-full md:w-auto text-center border-[3px] border-hardLime polysans-median fluid-text--hero-cta hover:bg-hardLime hover:text-neutral-950 transition-color duration-300"
+            className="px-10 py-3 rounded-full w-full md:w-auto text-center border-[3px] border-hardLime polysans-median fluid-text--hero-cta hover:bg-hardLime hover:text-neutral-950 transition-color duration-300 text-nowrap"
           >
             View plans
           </Link>

@@ -31,7 +31,6 @@ export default async function Home() {
         <div className="content-container">
           <Hero
             descriptionOne={copy.heroDescriptionOne}
-            descriptionTwo={copy.heroDescriptionTwo}
           />
         </div>
       </div>

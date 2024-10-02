@@ -3,6 +3,6 @@
 }
 
 .content-container {
-  @apply max-w-[1620px];
+  @apply max-w-screen-xl 2xl:max-w-screen-2xl;
   margin-inline: auto;
 }

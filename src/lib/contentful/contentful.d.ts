@@ -127,9 +127,6 @@ export interface IHomeCopyFields {
   /** Hero Description One */
   heroDescriptionOne: string;
 
-  /** Hero Description Two */
-  heroDescriptionTwo: string;
-
   /** Coaches Header */
   coachesHeader: string;
 
