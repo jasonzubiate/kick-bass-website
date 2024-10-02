@@ -72,8 +72,7 @@ export default function ReviewForm({ toggleModal }: ReviewFormProps) {
             </div>
 
             <p className="polysans-neutral-mono text-xs lg:text-sm">
-              Hey there. To submit a review of Kick & Bass, drop your name, the
-              year you joined, and a short review below. Cheers.
+              Hey there. To submit a review of Kick & Bass please fill out and submit the form below. Cheers.
             </p>
           </div>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
