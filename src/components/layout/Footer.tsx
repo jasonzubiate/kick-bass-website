@@ -1,6 +1,6 @@
 import { TbArrowUpRight } from "react-icons/tb";
 import { FaInstagram, FaTiktok, FaYoutube, FaFacebook } from "react-icons/fa";
-import Image from "next/image";
+
 import Link from "next/link";
 
 export default function Footer() {
@@ -110,12 +110,6 @@ export default function Footer() {
           </div>
           <div className="flex items-start md:items-center w-full p-4 lg:p-6 2xl:p-8 lg:w-8/12 gap-8 lg:gap-0 md:justify-between">
             <div className="flex flex-col md:flex-row gap-4 lg:gap-8">
-              <Link
-                href="/community"
-                className="fluid-text--testimonial footer-link"
-              >
-                Community
-              </Link>
               <Link
                 href="/coaches"
                 className="fluid-text--testimonial footer-link"

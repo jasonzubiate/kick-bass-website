@@ -58,14 +58,12 @@ export default function Header() {
         ref={cta}
         className="fixed hidden xl:flex right-4 lg:right-8 2xl:right-12 top-10 z-50 mix-blend-difference"
       >
-        <a
-          href="https://www.launchpass.com/k-and-b-tech-house/k-and-b-premium/v3"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/pricing"
           className="fluid-text--sm px-4 py-2 rounded-full border-2 border-neutral-50 hover:bg-neutral-50 hover:text-neutral-950 transition-colors duration-300"
         >
           Join Kick & Bass
-        </a>
+        </Link>
       </div>
 
       <div className="fixed top-10 right-4 lg:right-6 flex items-center gap-2 z-50">
