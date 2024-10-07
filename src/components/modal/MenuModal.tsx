@@ -24,6 +24,7 @@ const links = [
   { href: "/coaches", label: "Coaches" },
   { href: "/tutorials", label: "Tutorials" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/pricing#faq", label: "FAQs" },
   { href: "https://kick-bass.store/", label: "Shop", isExternal: true },
 ];
 

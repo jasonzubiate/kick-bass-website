@@ -10,19 +10,19 @@ export default function Hero({ descriptionOne }: HeroProps) {
     <div className="h-screen flex items-center pt-32 lg:pt-[10vw] 2xl:pt-[7vw]">
       <div className="flex flex-col gap-12 lg:gap-24 w-full">
         <h1 className="fluid-text--h1-lg polysans-median">
-          <div className="flex items-center w-full">
+          <div className="flex items-center w-full uppercase">
             <div>
               <span>L</span>
               <span>e</span>
-              <span className="backflip">v</span>
+              <span>v</span>
               <span>e</span>
               <span>l</span>
               <span> </span>
               <span>u</span>
-              <span className="bounce">p</span>
+              <span>p</span>
             </div>
 
-            <div className="relative w-14 h-14 sm:w-16 sm:h-16 z-0 left-[6vw] md:left-[1vw] md:w-[clamp(110px,23vw,360px)] md:h-[clamp(90px,9vw,160px)]">
+            <div className="relative w-14 h-14 sm:w-18 sm:h-18 z-0 left-[6vw] md:-left-[1vw] md:-top-[0.5vw] md:w-[clamp(110px,24vw,340px)] md:h-[clamp(90px,14vw,160px)] shake">
               <Image
                 src={"/stickers/vinyl-hand-lime.png"}
                 alt="Fresh Mix"
@@ -33,24 +33,24 @@ export default function Hero({ descriptionOne }: HeroProps) {
           </div>
 
           <div className="flex justify-end items-center w-full">
-            <div className="hidden md:flex *:relative w-[clamp(80px,13vw,220px)] h-[clamp(70px,10vw,160px)] rotate-6 mr-[6%] z-0">
+            {/* <div className="hidden md:flex *:relative w-[clamp(80px,13vw,220px)] h-[clamp(70px,10vw,160px)] rotate-6 mr-[6%] z-0">
               <Image
                 src={"/stickers/wet-danceflor.png"}
                 alt="Fresh Mix"
                 fill
                 className="object-contain object-center"
               />
-            </div>
+            </div> */}
 
-            <div className="whitespace-nowrap">
-              <span>y</span>
+            <div className="whitespace-nowrap uppercase">
+              <span className="spin">y</span>
               <span>o</span>
               <span>u</span>
               <span>r</span>
               <span> </span>
               <span>m</span>
               <span>u</span>
-              <span className="spin">s</span>
+              <span className="">s</span>
               <span>i</span>
               <span>c</span>
             </div>

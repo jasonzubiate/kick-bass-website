@@ -31,6 +31,13 @@ export default function Navbar({ pathname }: { pathname: string }) {
         Pricing
       </Link>
 
+      <Link
+        className={`${pathname === "/pricing" ? "nav-link--active" : "nav-link"}`}
+        href="/pricing#faq"
+      >
+        FAQs
+      </Link>
+
       <a
         className="nav-link"
         href="https://kick-bass.store/"

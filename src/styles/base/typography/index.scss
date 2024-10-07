@@ -169,8 +169,8 @@ p,
 }
 
 .fluid-text--h1-lg {
-  @include fluid-type(430px, 1920px, 70px, 250px);
-  @apply tracking-tight leading-none;
+  @include fluid-type(430px, 1920px, 70px, 210px);
+  @apply leading-none;
 }
 
 .fluid-text--hero-cta {

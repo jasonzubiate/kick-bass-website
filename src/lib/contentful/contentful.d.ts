@@ -12,6 +12,9 @@ export interface ICoachFields {
   /** Category */
   category: "Head" | "Main" | "Guest";
 
+  /** Order */
+  order: number;
+
   /** Image */
   image: Asset;
 
@@ -199,6 +202,31 @@ export interface IPackage extends Entry<IPackageFields> {
     contentType: {
       sys: {
         id: "package";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface IPricingCopyFields {
+  /** Chart Title */
+  chartTitle: string;
+
+  /** FAQ Header */
+  faqHeader: string;
+}
+
+export interface IPricingCopy extends Entry<IPricingCopyFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "pricingCopy";
         linkType: "ContentType";
         type: "Link";
       };
@@ -402,6 +430,7 @@ export type CONTENT_TYPE =
   | "feature"
   | "homeCopy"
   | "package"
+  | "pricingCopy"
   | "service"
   | "shopifyCollection"
   | "teamMember"
@@ -416,6 +445,7 @@ export type IEntry =
   | IFeature
   | IHomeCopy
   | IPackage
+  | IPricingCopy
   | IService
   | IShopifyCollection
   | ITeamMember

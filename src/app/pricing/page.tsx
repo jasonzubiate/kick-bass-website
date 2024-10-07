@@ -6,6 +6,8 @@ import {
   IFeatureFields,
   IPackage,
   IPackageFields,
+  IPricingCopy,
+  IPricingCopyFields,
 } from "@/lib/contentful/contentful";
 import QuestionsList from "./components/feature/QuestionsList";
 import FeaturesList from "./components/feature/FeaturesList";
@@ -40,6 +42,12 @@ export default async function Pricing() {
 
   const faqs = faqData.map((faq) => faq.fields) as IFaqFields[];
 
+  const copyData = (await client.getEntry(
+    "1RJ8WsuVAfrmufJZhibtyx"
+  )) as IPricingCopy;
+
+  const copy = copyData.fields as IPricingCopyFields;
+
   return (
     <div className="padding-container">
       <div className="content-container">
@@ -70,19 +78,11 @@ export default async function Pricing() {
           </div>
         </section>
 
-        <section className="section section--medium--margin">
+        <section id="faq" className="section section--medium--margin">
           <div className="flex flex-col lg:flex-row w-full lg:mt-36 gap-16 lg:gap-0 lg:justify-between">
             <div className="flex flex-col gap-4 xl:gap-6 items-start">
-              <div className="flex items-center gap-1.5 text-white">
-                <div className="kick-bass-square bg-white animate-pulse" />
-                <h2 className="offbit-101-bold uppercase tracking-wide section--header--sm">
-                  Frequently Asked Questions
-                </h2>
-              </div>
-
               <h2 className="flex flex-col leading-none fluid-text--2xl uppercase">
-                <span>The Answers To</span>
-                <span>Your Questions</span>
+                {copy.faqHeader || "Frequently Asked Questions"}
               </h2>
 
               <a

@@ -23,10 +23,12 @@ export default async function CoachesList() {
     return categoryOrder[a.category] - categoryOrder[b.category];
   });
 
-  const mainCoaches = coaches.filter(
-    (coach) => coach.category === "Main" || coach.category === "Head"
-  );
-  const guestCoaches = coaches.filter((coach) => coach.category === "Guest");
+  const mainCoaches = coaches
+    .filter((coach) => coach.category === "Main" || coach.category === "Head")
+    .sort((a, b) => a.order - b.order);
+  const guestCoaches = coaches
+    .filter((coach) => coach.category === "Guest")
+    .sort((a, b) => a.order - b.order);
 
   return (
     <div>
@@ -53,7 +55,7 @@ export default async function CoachesList() {
 
         <CoachesListOne coaches={guestCoaches} />
         <CoachesListTwo coaches={guestCoaches} marginTop="30vw" />
-        <CoachesListFour coaches={guestCoaches} marginTop="9vw" />
+        <CoachesListFour coaches={guestCoaches} marginTop="11vw" />
       </div>
     </div>
   );

@@ -1,19 +1,12 @@
-import Image from "next/image";
 import { client } from "@/lib/contentful/client";
 import Hero from "@/components/page/Hero";
-import {
-  IHomeCopy,
-  IHomeCopyFields,
-  ITeamMember,
-  ITeamMemberFields,
-} from "@/lib/contentful/contentful";
+import { IHomeCopy, IHomeCopyFields } from "@/lib/contentful/contentful";
 import PackagesList from "@/components/feature/PackagesList";
 import SectionHeader from "@/components/layout/SectionHeader";
 import CoachesList from "@/components/feature/CoachesList";
 import TestimonialsList from "@/components/feature/TestimonialsList";
 import ReviewModal from "@/components/modal/ReviewModal";
 import ProductsList from "@/components/feature/ProductsList";
-import { TbArrowUpRight } from "react-icons/tb";
 import ServicesList from "@/components/feature/ServicesList";
 import TeamMemberList from "@/components/feature/TeamMemberList";
 import Globe from "@/components/ui/Globe";
@@ -29,9 +22,7 @@ export default async function Home() {
     <main>
       <div className="padding-container">
         <div className="content-container">
-          <Hero
-            descriptionOne={copy.heroDescriptionOne}
-          />
+          <Hero descriptionOne={copy.heroDescriptionOne} />
         </div>
       </div>
 
@@ -114,7 +105,7 @@ export default async function Home() {
         <Globe />
       </section>
 
-      <section className="section section--medium--margin">
+      {/* <section className="section section--medium--margin">
         <div className="padding-container">
           <div className="flex items-center justify-center gap-16">
             <div className="relative hidden lg:flex h-[200px] w-32">
@@ -154,7 +145,7 @@ export default async function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

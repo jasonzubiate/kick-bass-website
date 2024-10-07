@@ -29,7 +29,9 @@ export default function FeaturesList({
               const hasFeature =
                 pkg.features &&
                 pkg.features.some(
-                  (f) => (f.fields as IFeatureFields).title === feature.title
+                  (f) =>
+                    f.fields &&
+                    (f.fields as IFeatureFields).title === feature.title
                 );
 
               return (
