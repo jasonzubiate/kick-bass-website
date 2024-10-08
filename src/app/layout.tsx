@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-neutral-950 text-white">
         <LenisContext>
-          {/* <PreLoader /> */}
+          <PreLoader />
           <Header />
           <CursorDot />
           {children}
