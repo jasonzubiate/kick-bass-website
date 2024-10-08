@@ -60,7 +60,7 @@ export default function ServiceCard({
       ref={cardRef}
       onMouseEnter={onHover}
       onMouseLeave={onHoverOut}
-      className="service-card w-full h-[320px] lg:h-[400px] 2xl:h-[500px] flex items-end rounded-2xl p-4 bg-neutral-900 relative"
+      className="service-card w-full h-[320px] lg:h-[360px] 2xl:h-[500px] flex items-end rounded-2xl p-3 2xl:p-4 bg-neutral-900 relative"
     >
       <div className="service-card__image absolute top-[35%] 2xl:top-[40%] left-1/2 -translate-x-1/2 -translate-y-[40%] h-[128px] w-[128px] lg:h-[144px] lg:w-[144px] 2xl:h-[164px] 2xl:w-[164px] rotate-6 transition-all duration-500">
         <Image
@@ -91,7 +91,7 @@ export default function ServiceCard({
               autoPlay
               loop
               playsInline
-              className="w-full h-[150px] lg:h-[200px] 2xl:h-[250px] rounded-md lg:rounded-lg object-cover object-center"
+              className="w-full h-[150px] lg:h-[175px] 2xl:h-[250px] rounded-md 2xl:rounded-lg object-cover object-center"
             />
 
             <p className="text-sm lg:text-base 2xl:text-lg text-white transition-all duration-300 leading-tight">

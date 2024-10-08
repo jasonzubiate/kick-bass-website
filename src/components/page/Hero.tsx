@@ -22,7 +22,7 @@ export default function Hero({ descriptionOne }: HeroProps) {
               <span>p</span>
             </div>
 
-            <div className="relative w-14 h-14 sm:w-18 sm:h-18 z-0 left-[6vw] md:-left-[1vw] md:-top-[0.5vw] md:w-[clamp(110px,24vw,340px)] md:h-[clamp(90px,14vw,160px)] shake">
+            <div className="relative w-14 h-14 sm:w-18 sm:h-18 z-0 left-[6vw] md:-left-[1vw] md:-top-[0.5vw] md:w-[clamp(110px,18vw,340px)] md:h-[clamp(90px,9vw,160px)] shake">
               <Image
                 src={"/stickers/vinyl-hand-lime.png"}
                 alt="Fresh Mix"

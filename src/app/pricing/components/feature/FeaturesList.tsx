@@ -15,9 +15,9 @@ export default function FeaturesList({
       <thead>
         <tr className="table__row">
           <th className="text-start fluid-text--lg">Features</th>
-          <th className="bg-black text-softBlue fluid-text--lg">Basic</th>
-          <th className="text-hardLime fluid-text--lg">Standard</th>
-          <th className="bg-black text-softPink fluid-text--lg">Premium</th>
+          <th className="bg-black text-[#a6ff00] fluid-text--lg">Basic</th>
+          <th className="text-[#ff48c9] fluid-text--lg">Standard</th>
+          <th className="bg-black text-[#6d77ff] fluid-text--lg">Premium</th>
         </tr>
       </thead>
       <tbody>

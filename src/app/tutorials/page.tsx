@@ -22,7 +22,7 @@ export default async function Page() {
   const data = copy.fields as ITutorialsCopyFields;
 
   return (
-    <div id="tutorials" className="flex flex-col gap-24 pt-36 mb-20 xl:mb-48">
+    <div id="tutorials" className="flex flex-col gap-24 pt-36 mb-20 xl:mb-40">
       <div className="padding-container">
         <p className="fluid-text--base w-full lg:w-5/12 2xl:w-4/12 max-w-[700px]">
           {data.paragraph ||
