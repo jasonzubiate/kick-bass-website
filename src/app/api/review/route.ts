@@ -2,6 +2,35 @@
 
 import { NextResponse } from "next/server";
 import { managementClient } from "@/lib/contentful/managementClient";
+import nodemailer from "nodemailer";
+
+// Create a transporter using SMTP
+const transporter = nodemailer.createTransport({
+  host: "your-smtp-host",
+  port: 465,
+  secure: true,
+  auth: {
+    user: "jzubiate.dev@gmail.com",
+    pass: "ynjksgrcqfocuyyt",
+  },
+});
+
+// Function to send email
+async function sendEmail(subject: string, text: string) {
+  const mailOptions = {
+    from: "jzubiate.dev@gmail.com",
+    to: "jzubiate.dev@gmail.com",
+    subject: subject,
+    text: text,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully");
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
+}
 
 export async function POST(req: Request) {
   try {
@@ -14,9 +43,6 @@ export async function POST(req: Request) {
     const joined = formData.get("joined") as string;
     const rating = formData.get("rating") as string;
     const review = formData.get("review") as string;
-
-    // Debug log to check data structure
-    console.log(formData);
 
     // Ensure we have an image file
     if (image && typeof image === "object") {
@@ -75,6 +101,12 @@ export async function POST(req: Request) {
       });
 
       await entry.publish();
+
+      // Send email notification
+      await sendEmail(
+        "New Review Of Kick & Bass Submitted",
+        `A new review has been submitted by ${author}.\nRating: ${rating}\nReview: ${review}`
+      );
 
       // Return success response
       return NextResponse.json(
