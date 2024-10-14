@@ -81,7 +81,7 @@ export default async function Pricing() {
         <section id="faq" className="section section--medium--margin">
           <div className="flex flex-col lg:flex-row w-full lg:mt-36 gap-16 lg:gap-0 lg:justify-between">
             <div className="flex flex-col gap-4 xl:gap-6 items-start">
-              <h2 className="flex flex-col leading-none fluid-text--2xl uppercase">
+              <h2 className="flex flex-col leading-none fluid-text--2xl uppercase w-9/12">
                 {copy.faqHeader || "Frequently Asked Questions"}
               </h2>
 

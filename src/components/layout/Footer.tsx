@@ -128,6 +128,12 @@ export default function Footer() {
               >
                 Pricing
               </Link>
+              <Link
+                href="/pricing#faq"
+                className="fluid-text--testimonial footer-link"
+              >
+                FAQs
+              </Link>
               <a
                 href="https://kick-bass.store/"
                 className="fluid-text--testimonial footer-link"

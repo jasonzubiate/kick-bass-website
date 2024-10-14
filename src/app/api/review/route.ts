@@ -6,20 +6,20 @@ import nodemailer from "nodemailer";
 
 // Create a transporter using SMTP
 const transporter = nodemailer.createTransport({
-  host: "your-smtp-host",
+  host: "smtp.gmail.com",
   port: 465,
   secure: true,
   auth: {
-    user: "jzubiate.dev@gmail.com",
-    pass: "ynjksgrcqfocuyyt",
+    user: "hello@kick-bass.com",
+    pass: "ntusjwfqfxbcqjsm",
   },
 });
 
 // Function to send email
 async function sendEmail(subject: string, text: string) {
   const mailOptions = {
-    from: "jzubiate.dev@gmail.com",
-    to: "jzubiate.dev@gmail.com",
+    from: "hello@kick-bass.com",
+    to: "hello@kick-bass.com",
     subject: subject,
     text: text,
   };
