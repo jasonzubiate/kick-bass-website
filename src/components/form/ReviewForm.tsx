@@ -72,7 +72,8 @@ export default function ReviewForm({ toggleModal }: ReviewFormProps) {
             </div>
 
             <p className="polysans-neutral-mono text-xs lg:text-sm">
-              Hey there. To submit a review of Kick & Bass please fill out and submit the form below. Cheers.
+              Hey there. To submit a review of Kick & Bass please fill out and
+              submit the form below. Cheers.
             </p>
           </div>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -205,13 +206,21 @@ export default function ReviewForm({ toggleModal }: ReviewFormProps) {
             />
           </form>
 
-          <button
-            onClick={handleSubmit}
-            disabled={submitting}
-            className="px-4 py-2 text-neutral-950 bg-white hover:bg-neutral-100 rounded-full transition-colors duration-300 uppercase text-xs lg:text-sm ml-auto"
-          >
-            {submitting ? "Submitting..." : "Submit"}
-          </button>
+          <div className="flex justify-between items-center w-full">
+            <p
+              className={`text-xs lg:text-sm ${formData.review.length > 300 ? "text-appleRed" : "text-white"}`}
+            >
+              {formData.review.length}/300 Characters
+            </p>
+
+            <button
+              onClick={handleSubmit}
+              disabled={submitting || formData.review.length > 300}
+              className={`px-4 py-2 text-neutral-950 rounded-full transition-colors duration-300 uppercase text-xs lg:text-sm ${formData.review.length > 300 ? "bg-neutral-400" : "bg-white hover:bg-neutral-100"}`}
+            >
+              {submitting ? "Submitting..." : "Submit"}
+            </button>
+          </div>
         </div>
       </div>
     </>
