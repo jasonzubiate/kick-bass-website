@@ -95,7 +95,7 @@ export default async function Home() {
         <ProductsList />
       </section>
 
-      <section className="relative">
+      <section className="relative mb-24">
         <div className="padding-container z-10 absolute flex flex-col items-center justify-center h-full">
           <SectionHeader header={"Our Team"} color="white" />
 
