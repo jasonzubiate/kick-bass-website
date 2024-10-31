@@ -1,10 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Kick & Bass | Level Up Your Music Production",
-    template: "%s | Your App Name",
-  },
+  title: "Kick & Bass | Level Up Your Music Production",
   description:
     "We can help you with music production and Career Growth. We are a friendly and talented team. Join today!",
   keywords: [
@@ -21,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://kick-bass-website-topaz.vercel.app",
+    url: "https://www.kick-bass.com/m",
     siteName: "Kick & Bass",
     images: [
       {
@@ -42,5 +39,5 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
-  metadataBase: new URL("https://kick-bass-website-topaz.vercel.app"),
+  metadataBase: new URL("https://www.kick-bass.com/m"),
 };
