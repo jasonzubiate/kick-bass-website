@@ -7,6 +7,8 @@ import Footer from "@/components/layout/Footer";
 import "../styles/globals.scss";
 import PreLoader from "@/components/layout/PreLoader";
 import CursorDot from "@/components/ui/CursorDot";
+import { ToastProvider } from "@/contexts/ToastContext";
+import { ToastContainer } from "@/components/ui/Toast";
 
 export { metadata };
 
@@ -22,7 +24,10 @@ export default function RootLayout({
           <PreLoader />
           <Header />
           <CursorDot />
-          {children}
+          <ToastProvider>
+            {children}
+            <ToastContainer />
+          </ToastProvider>
           <Footer />
           <Analytics />
           <HotjarScript />

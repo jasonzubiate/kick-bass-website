@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useCallback, Dispatch, SetStateAction } from "react";
+import { useToast } from "@/contexts/ToastContext";
+import { revalidatePath } from "next/cache";
 
 type FormData = {
   image: File | null;
@@ -32,6 +34,8 @@ export function useReviewForm(toggleModal: Dispatch<SetStateAction<boolean>>) {
     joined: false,
     review: false,
   });
+
+  const { addToast } = useToast();
 
   const [submitting, setSubmitting] = useState(false);
 
@@ -82,7 +86,7 @@ export function useReviewForm(toggleModal: Dispatch<SetStateAction<boolean>>) {
 
       if (response.ok) {
         toggleModal(false);
-        setSubmitting(false);
+
         setFormData({
           image: null,
           author: "",
@@ -90,10 +94,14 @@ export function useReviewForm(toggleModal: Dispatch<SetStateAction<boolean>>) {
           rating: 0,
           review: "",
         });
+
+        addToast("Review submitted successfully", "success");
+        revalidatePath("/");
       }
     } catch (error) {
-      console.error("Failed to submit review", error);
+      addToast("Failed to submit review", "error");
     }
+    setSubmitting(false);
   };
 
   return {
