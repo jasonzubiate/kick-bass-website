@@ -26,23 +26,24 @@ export default async function Home() {
         </div>
       </div>
 
-      <section className="section--small--margin">
+      {/* <section className="section--small--margin">
         <div className="padding-container">
           <div className="content-container">
             <PackagesList />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="section section--medium--margin">
         <div className="padding-container">
           <div className="content-container">
-            <div className="flex items-center gap-1.5 mb-12">
+            <SectionHeader header="Our Services" color="white" />
+            {/* <div className="flex items-center gap-1.5 mb-12">
               <div className="kick-bass-square bg-neutral-50 animate-pulse" />
               <h2 className="offbit-101-bold uppercase tracking-wide fluid-text--base">
                 Our Services
               </h2>
-            </div>
+            </div> */}
 
             <ServicesList />
           </div>
