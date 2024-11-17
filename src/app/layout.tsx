@@ -1,5 +1,6 @@
 import HotjarScript from "@/lib/hotjar/HotjarScript";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import LenisContext from "@/contexts/LenisContext";
 import { metadata } from "../../metadata";
 import Header from "@/components/layout/Header";
@@ -30,6 +31,7 @@ export default function RootLayout({
           </ToastProvider>
           <Footer />
           <Analytics />
+          <SpeedInsights />
           <HotjarScript />
         </LenisContext>
       </body>
